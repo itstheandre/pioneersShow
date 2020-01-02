@@ -6,7 +6,6 @@ export const query = graphql`
     sanityEpisode(slug: { current: { eq: $slug } }) {
       title
       episodeLink
-      body
     }
   }
 `

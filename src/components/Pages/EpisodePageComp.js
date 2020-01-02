@@ -7,7 +7,7 @@ import RcContactCard from "../Cards/RcContactCard"
 
 const EpisodePageComp = ({ allEpisodes }) => {
   const { ref } = useWrapper()
-  const { selected, seasonTags, episodeList } = useSeasons(allEpisodes)
+  const { seasonTags, episodeList } = useSeasons(allEpisodes)
 
   return (
     <div>
