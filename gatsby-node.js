@@ -19,23 +19,23 @@ exports.createPages = async ({ actions, graphql }) => {
     return arr.map(({ node }) => node)
   }
 
-  const seasonsQuery = await graphql(`
-    {
-      allSanitySeason {
-        edges {
-          node {
-            title
-            slug {
-              current
-            }
-          }
-        }
-      }
-    }
-  `)
-  const seasons = seasonsQuery.data.allSanitySeason.edges.map(
-    ({ node }) => node
-  )
+  // const seasonsQuery = await graphql(`
+  //   {
+  //     allSanitySeason {
+  //       edges {
+  //         node {
+  //           title
+  //           slug {
+  //             current
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // const seasons = seasonsQuery.data.allSanitySeason.edges.map(
+  //   ({ node }) => node
+  // )
 
   const episodesQuery = await graphql(`
     {
@@ -67,14 +67,14 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  seasons.forEach(season => {
-    actions.createPage({
-      path: `/info/${season.slug.current}`,
-      component: path.resolve("./src/template/Season.js"),
-      context: {
-        slug: season.slug.current,
-        title: season.title,
-      },
-    })
-  })
+  // seasons.forEach(season => {
+  //   actions.createPage({
+  //     path: `/info/${season.slug.current}`,
+  //     component: path.resolve("./src/template/Season.js"),
+  //     context: {
+  //       slug: season.slug.current,
+  //       title: season.title,
+  //     },
+  //   })
+  // })
 }

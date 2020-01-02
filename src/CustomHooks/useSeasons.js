@@ -24,17 +24,17 @@ import RcContactCard from "../components/Cards/RcContactCard"
 //   [{ id: "all", state: "selected", inner: "All" }]
 // )
 
-export const defaultState = [
-  { id: "all", state: "selected", inner: "All" },
-  { id: "season1", state: "unselected", inner: "Season 1" },
-  { id: "season2", state: "unselected", inner: "Season 2" },
-  { id: "season3", state: "unselected", inner: "Season 3" },
-]
+// export const defaultState = [
+//   { id: "all", state: "selected", inner: "All" },
+//   { id: "season1", state: "unselected", inner: "Season 1" },
+//   { id: "season2", state: "unselected", inner: "Season 2" },
+//   { id: "season3", state: "unselected", inner: "Season 3" },
+// ]
 
-const newDefault = {
-  allSeasons: defaultState,
-  selected: "All",
-}
+// const newDefault = {
+//   allSeasons: defaultState,
+//   selected: "All",
+// }
 
 export function useSeasons(allEpisodes) {
   const allSeasons = [
