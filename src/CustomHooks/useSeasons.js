@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Tags from "../styled/Tags"
 import RcContactCard from "../components/Cards/RcContactCard"
+import SqEpisodeCard from "../components/Cards/SqEpisodeCard"
 
 /* -------------------------------------------------------------------------- */
 /*                         MAIN LOGIN BEHIND THE HOOK                         */
@@ -61,7 +62,6 @@ export function useSeasons(allEpisodes) {
       },
     ]
   )
-  // const [seasonState, setSeasons] = useState(newDefault)
   const [seasonState, setSeasons] = useState({
     allSeasons,
     selected: "All",
@@ -96,7 +96,7 @@ export function useSeasons(allEpisodes) {
 
   const episodeList = filteredEpisodes.map(el => {
     console.log(typeof el.publishedDate)
-    const { title, publishedDate, runtime, id } = el
+    const { title, publishedDate, runtime, id, episodeNumber } = el
     const img = el.mainImage.asset.fluid.src
     return (
       <RcContactCard
@@ -105,9 +105,12 @@ export function useSeasons(allEpisodes) {
         publishedDate={publishedDate}
         runtime={runtime}
         img={img}
+        episodeNumber={episodeNumber}
       />
     )
   })
+
+  const lastThree = allEpisodes.slice(0, 3)
 
   function updater(id) {
     const newSeasons = [...seasonState.allSeasons]
@@ -122,9 +125,27 @@ export function useSeasons(allEpisodes) {
     return newSeasons
   }
 
+  const lastThreeCards = lastThree.map(el => {
+    console.log(el)
+    const img = el.mainImage.asset.fluid.src
+    const { title, runtime, publishedDate, id, episodeNumber } = el
+    return (
+      <SqEpisodeCard
+        img={img}
+        title={title}
+        runtime={runtime}
+        publishedDate={publishedDate}
+        key={id}
+        episodeNumber={episodeNumber}
+      />
+    )
+  })
+
   return {
     selected,
     seasonTags,
     episodeList,
+    lastThree,
+    lastThreeCards,
   }
 }

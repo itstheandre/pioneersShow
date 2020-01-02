@@ -9,7 +9,13 @@ import {
   IconOverlay,
 } from "../../styled/RecContactCard"
 
-const RcContactCard = ({ img, title, runtime, publishedDate }) => {
+const RcContactCard = ({
+  img,
+  title,
+  runtime,
+  episodeNumber,
+  publishedDate,
+}) => {
   return (
     <EpisodeSection>
       {/* <IconOverlay img={elipse}> */}
@@ -19,9 +25,11 @@ const RcContactCard = ({ img, title, runtime, publishedDate }) => {
       {/* </IconOverlay> */}
       <EpisodeBody>
         <RqEpisodeDescription>
-          {runtime} | {publishedDate}
+          {runtime}m | {publishedDate}
         </RqEpisodeDescription>
-        <RqEpisodeTitle>{title}</RqEpisodeTitle>
+        <RqEpisodeTitle>
+          #{episodeNumber} - {title}
+        </RqEpisodeTitle>
       </EpisodeBody>
     </EpisodeSection>
   )

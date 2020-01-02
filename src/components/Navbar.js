@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <NavBarStyled change={change}>
-        <Link to="/">
+        <Link to="/index1">
           <NavLogo src={logo} />
         </Link>
         <div>

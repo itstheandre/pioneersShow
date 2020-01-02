@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   {
-    allSanityEpisode {
+    allSanityEpisode(sort: { fields: episodeNumber, order: DESC }) {
       edges {
         node {
           id
@@ -25,6 +25,7 @@ export const query = graphql`
           }
           publishedDate
           runtime
+          episodeNumber
         }
       }
     }
