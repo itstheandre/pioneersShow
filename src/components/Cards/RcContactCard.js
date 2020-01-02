@@ -9,29 +9,38 @@ import {
   IconOverlay,
 } from "../../styled/RecContactCard"
 
+import { Link } from "gatsby"
+import { GatsbyCleanup } from "../../styled/GatsbyCleanup"
+
 const RcContactCard = ({
   img,
   title,
   runtime,
   episodeNumber,
   publishedDate,
+  slug,
 }) => {
   return (
-    <EpisodeSection>
-      {/* <IconOverlay img={elipse}> */}
-      <EpisodeOverlay>
-        <EpisodeImage img={img} />
-      </EpisodeOverlay>
-      {/* </IconOverlay> */}
-      <EpisodeBody>
-        <RqEpisodeDescription>
-          {runtime}m | {publishedDate}
-        </RqEpisodeDescription>
-        <RqEpisodeTitle>
-          #{episodeNumber} - {title}
-        </RqEpisodeTitle>
-      </EpisodeBody>
-    </EpisodeSection>
+    // <G to={`/${slug}`}>
+    <GatsbyCleanup>
+      <Link to={`/${slug}`}>
+        <EpisodeSection>
+          {/* <IconOverlay img={elipse}> */}
+          <EpisodeImage img={img}>
+            <EpisodeOverlay />
+          </EpisodeImage>
+          {/* </IconOverlay> */}
+          <EpisodeBody>
+            <RqEpisodeDescription>
+              {runtime}m | {publishedDate}
+            </RqEpisodeDescription>
+            <RqEpisodeTitle>
+              #{episodeNumber} - {title}
+            </RqEpisodeTitle>
+          </EpisodeBody>
+        </EpisodeSection>
+      </Link>
+    </GatsbyCleanup>
   )
 }
 

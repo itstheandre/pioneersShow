@@ -3,7 +3,7 @@ import allStyles from "./Theme"
 const { tags } = allStyles
 
 const Tag = styled.div`
-  margin: 1rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

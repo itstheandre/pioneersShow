@@ -3,8 +3,10 @@ import allStyles from "./Theme"
 const { palette } = allStyles
 
 const SquareWrapper = styled.div`
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  margin-bottom: 15rem;
 `
 
 const ContentSection = styled.div`
