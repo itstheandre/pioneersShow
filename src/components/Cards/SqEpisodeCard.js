@@ -6,19 +6,39 @@ import {
   ContentBody,
   EpisodeTitle,
   EpisodeDescription,
+  SquareWrapper,
 } from "../../styled/SqContentCard"
+import { Link } from "gatsby"
+import { GatsbyCleanup } from "../../styled/GatsbyCleanup"
 
-const EpisodeCard = ({ img, title }) => {
+const EpisodeCard = ({
+  img,
+  title,
+  episodeNumber,
+  runtime,
+  publishedDate,
+  slug,
+}) => {
   return (
-    <ContentSection>
-      <ContentImage img={img}>
-        <ContentOverlay />
-      </ContentImage>
-      <ContentBody>
-        <EpisodeDescription>Test</EpisodeDescription>
-        <EpisodeTitle>{title}</EpisodeTitle>
-      </ContentBody>
-    </ContentSection>
+    // <SquareWrapper>
+    <GatsbyCleanup>
+      <Link to={`/${slug}`}>
+        <ContentSection>
+          <ContentImage img={img}>
+            <ContentOverlay />
+          </ContentImage>
+          <ContentBody>
+            <EpisodeDescription>
+              {runtime}m | {publishedDate}
+            </EpisodeDescription>
+            <EpisodeTitle>
+              #{episodeNumber} - {title}
+            </EpisodeTitle>
+          </ContentBody>
+        </ContentSection>
+      </Link>
+    </GatsbyCleanup>
+    // </SquareWrapper>
   )
 }
 

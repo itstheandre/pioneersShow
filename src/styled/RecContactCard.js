@@ -5,7 +5,7 @@ const { palette } = allStyles
 const EpisodeSection = styled.div`
   width: 66rem;
   height: 9rem;
-  margin: 10rem auto;
+  margin: 3rem 0 3rem 0;
   display: flex;
 `
 const EpisodeOverlay = styled.div`

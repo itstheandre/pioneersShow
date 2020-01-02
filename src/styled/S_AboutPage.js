@@ -25,12 +25,12 @@ const AboutBody = styled.div`
 const AboutContent = styled.div`
   text-align: justify;
   width: 40%;
-  & p {
+  /* & p {
     font-size: 2rem;
     line-height: 3rem;
     padding: 0;
     margin: 2rem 0;
-  }
+  } */
 `
 
 export { AboutPageHero, AboutBody, AboutContent }

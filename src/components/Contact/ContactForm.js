@@ -8,11 +8,22 @@ import {
   FormContainer,
   IndInpCont,
 } from "../../styled/Forms"
+import { Button } from "../../styled/Buttons"
+import { LayoutWrapper } from "../../styled/LayoutWrapper"
 
 const ContactForm = () => {
   return (
     <>
-      <form>
+      <form
+        name="contact"
+        method="post"
+        action="/thanks"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        {" "}
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <FormContainer>
           <IndInpCont>
             <Label htmlFor="name">Name*</Label>
@@ -43,6 +54,9 @@ const ContactForm = () => {
             <LInput placeholder="Say Hello" type="textarea" id="message" />
           </LInpCont>
         </FormContainer>
+        <Button styleType="primary" type="submit">
+          Submit
+        </Button>
       </form>
     </>
   )

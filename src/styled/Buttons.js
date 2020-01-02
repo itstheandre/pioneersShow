@@ -8,13 +8,16 @@ const Button = styled.button`
   height: ${buttons.height};
   padding: ${buttons.padding};
   font-size: ${buttons["font-size"]};
-  ${({ type }) =>
-    type &&
+  ${({ styleType }) =>
+    styleType &&
     css`
-      background-color: ${({ type }) => buttons.background[type]};
-      color: ${({ type }) => buttons.text[type]};
-      border: ${({ type }) => buttons.borders[type]};
+      background-color: ${({ styleType }) => buttons.background[styleType]};
+      color: ${({ styleType }) => buttons.text[styleType]};
+      border: ${({ styleType }) => buttons.borders[styleType]};
     `};
 `
 
-export default Button
+const DifButton = styled(Button)`
+  margin: 4rem 0;
+`
+export { DifButton, Button }

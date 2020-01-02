@@ -29,4 +29,17 @@ const MainH2 = styled.h3`
   color: ${normalH2.color};
 `
 
-export { UpperCased, MainHeroTitle, MainH2 }
+const AboutBodyText = styled.p`
+  font-size: 2rem;
+  line-height: 3rem;
+  padding: 0;
+  margin: 2rem 0;
+`
+
+const HomeBodyText = styled(AboutBodyText)`
+  width: 65%;
+  text-align: center;
+  margin: 2rem 0;
+`
+
+export { UpperCased, MainHeroTitle, MainH2, AboutBodyText, HomeBodyText }

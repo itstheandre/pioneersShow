@@ -2,6 +2,13 @@ import styled from "styled-components"
 import allStyles from "./Theme"
 const { palette } = allStyles
 
+const SquareWrapper = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15rem;
+`
+
 const ContentSection = styled.div`
   height: 43rem;
   width: 43rem;
@@ -9,7 +16,7 @@ const ContentSection = styled.div`
   flex-direction: column;
   box-shadow: ${palette.boxShadow};
   border-radius: 6px;
-  margin: 5rem auto;
+  margin: 1.5rem;
 `
 
 const ContentImage = styled.div`
@@ -56,6 +63,7 @@ const EpisodeTitle = styled.h3`
 `
 
 export {
+  SquareWrapper,
   ContentSection,
   ContentImage,
   ContentOverlay,

@@ -1,81 +1,46 @@
-import React, { useState, useEffect } from "react"
+import React, { useReducer } from "react"
 import Tags from "../styled/Tags"
 import RcContactCard from "../components/Cards/RcContactCard"
-
-/* -------------------------------------------------------------------------- */
-/*                         MAIN LOGIN BEHIND THE HOOK                         */
-/* -------------------------------------------------------------------------- */
-
-// const uniqueSeasons = [...new Set(allEpisodes.map(el => el.season[0].title))]
-// const allSeasons = uniqueSeasons.reduce(
-//   (acc, val) => {
-//     return [
-//       ...acc,
-//       {
-//         id: val
-//           .split(" ")
-//           .join("")
-//           .toLowerCase(),
-//         state: "unselected",
-//         inner: val,
-//       },
-//     ]
-//   },
-//   [{ id: "all", state: "selected", inner: "All" }]
-// )
-
-export const defaultState = [
-  { id: "all", state: "selected", inner: "All" },
-  { id: "season1", state: "unselected", inner: "Season 1" },
-  { id: "season2", state: "unselected", inner: "Season 2" },
-  { id: "season3", state: "unselected", inner: "Season 3" },
-]
-
-const newDefault = {
-  allSeasons: defaultState,
-  selected: "All",
-}
+import SqEpisodeCard from "../components/Cards/SqEpisodeCard"
+import {
+  selectedEverything,
+  selectedStateChange,
+  seasonDispatch,
+} from "../lib/funcs"
 
 export function useSeasons(allEpisodes) {
-  const allSeasons = [
-    ...new Set(allEpisodes.map(el => el.season[0].title)),
-  ].reduce(
-    (acc, val) => {
-      return [
-        ...acc,
-        {
-          id: val
-            .split(" ")
-            .join("")
-            .toLowerCase(),
-          state: "unselected",
-          inner: val,
-        },
-      ]
-    },
-    [
-      {
-        id: "all",
-        state: "selected",
-        inner: "All",
-      },
-    ]
-  )
-  // const [seasonState, setSeasons] = useState(newDefault)
-  const [seasonState, setSeasons] = useState({
-    allSeasons,
-    selected: "All",
-  })
+  const allSeasons = selectedEverything(allEpisodes)
+  const startingState = { allSeasons, selected: "All", order: "DESC" }
+
+  const [seasonState, dispatch] = useReducer(seasonDispatch, startingState)
+
   const { selected } = seasonState
 
-  function update(id, inner) {
-    const allSeasons = updater(id)
-    setSeasons({
-      allSeasons,
-      selected: inner,
-    })
+  function updateSeason(id, inner) {
+    const allSeasonsUpdated = selectedStateChange(id, seasonState)
+
+    dispatch({ type: "seasonUpdate", inner, allSeasons: allSeasonsUpdated })
   }
 
+  function updateOrder(order) {
+    dispatch({ type: "orderEpisodes", order })
+  }
+
+  function asc(a, b) {
+    return a.episodeNumber - b.episodeNumber
+  }
+
+  function desc(a, b) {
+    return b.episodeNumber - a.episodeNumber
+  }
+
+  function sortEpisodes() {
+    if (filteredEpisodes.length < 2) return
+    if (seasonState.order === "ASC") return asc
+    else return desc
+  }
+
+  // Tags
   const seasonTags = seasonState.allSeasons.map(el => {
     return (
       <Tags
@@ -83,21 +48,26 @@ export function useSeasons(allEpisodes) {
         id={el.id}
         selected={el.state}
         // onClick={() => updater(el.id)}
-        onClick={() => update(el.id, el.inner)}
+        onClick={() => updateSeason(el.id, el.inner)}
       >
         {el.inner}
       </Tags>
     )
   })
+
+  // Episode Filtering
   const filteredEpisodes = allEpisodes.filter(episode => {
     const test = episode.season.some(el => el.title === selected)
     return episode.season.some(el => el.title === selected)
   })
 
-  const episodeList = filteredEpisodes.map(el => {
-    console.log(typeof el.publishedDate)
-    const { title, publishedDate, runtime, id } = el
+  const sortedEpisodes = [...filteredEpisodes].sort(sortEpisodes())
+
+  // Rectangle ContactCard
+  const episodeList = sortedEpisodes.map(el => {
+    const { title, publishedDate, runtime, id, episodeNumber } = el
     const img = el.mainImage.asset.fluid.src
+    const slug = el.slug.current
     return (
       <RcContactCard
         key={id}
@@ -105,26 +75,38 @@ export function useSeasons(allEpisodes) {
         publishedDate={publishedDate}
         runtime={runtime}
         img={img}
+        episodeNumber={episodeNumber}
+        slug={slug}
       />
     )
   })
 
-  function updater(id) {
-    const newSeasons = [...seasonState.allSeasons]
-    newSeasons.forEach(el => {
-      if (el.id === id) {
-        el.state = "selected"
-      } else {
-        el.state = "unselected"
-      }
-    })
+  // Square ContactCard
+  const lastThreeCards = allEpisodes.slice(0, 3).map(el => {
+    const img = el.mainImage.asset.fluid.src
+    const { title, runtime, publishedDate, id, episodeNumber } = el
+    const slug = el.slug.current
 
-    return newSeasons
-  }
+    return (
+      <SqEpisodeCard
+        img={img}
+        title={title}
+        runtime={runtime}
+        publishedDate={publishedDate}
+        key={id}
+        episodeNumber={episodeNumber}
+        slug={slug}
+      />
+    )
+  })
 
   return {
     selected,
     seasonTags,
     episodeList,
+    lastThreeCards,
+    seasonState,
+    updateOrder,
+    sortedEpisodes,
   }
 }

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <NavBarStyled change={change}>
-        <Link to="/">
+        <Link to="/index1">
           <NavLogo src={logo} />
         </Link>
         <div>
@@ -21,9 +21,9 @@ const Navbar = () => {
             <MenuItems>
               <Link to="/about">About</Link>
             </MenuItems>
-            <MenuItems>
+            {/* <MenuItems>
               <Link to="/team">Team</Link>
-            </MenuItems>
+            </MenuItems> */}
             <MenuItems>
               <Link to="/episodes">Episode List</Link>
             </MenuItems>

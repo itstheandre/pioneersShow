@@ -12,6 +12,7 @@ import pioneersWhiteLogo from "../assets/images/pioneers-white-logo.png"
 
 // HomePage
 import HomePageBG from "../assets/images/HomePageBG.png"
+import LetterImg from "../assets/images/LetterImg.png"
 
 // Contact Page
 import ContactPageBG from "../assets/images/contact-page.png"
@@ -44,4 +45,5 @@ export {
   youtubeColorLogo,
   imageTest,
   elipse,
+  LetterImg,
 }
