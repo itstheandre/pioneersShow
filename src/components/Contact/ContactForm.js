@@ -27,7 +27,12 @@ const ContactForm = () => {
         <FormContainer>
           <IndInpCont>
             <Label htmlFor="name">Name*</Label>
-            <SInput type="text" placeholder="Your street name" id="name" />
+            <SInput
+              type="text"
+              placeholder="Your street name"
+              id="name"
+              name="name"
+            />
           </IndInpCont>
           <IndInpCont>
             <Label htmlFor="email">Email*</Label>
@@ -35,6 +40,7 @@ const ContactForm = () => {
               type="email"
               placeholder="Your digital address"
               id="email"
+              name="email"
             />
           </IndInpCont>
         </FormContainer>
@@ -45,13 +51,19 @@ const ContactForm = () => {
               type="text"
               placeholder="If you had to explain your message in one sentence"
               id="subject"
+              name="subject"
             />
           </IndInpCont>
         </FormContainer>
         <FormContainer>
           <LInpCont>
             <Label htmlFor="message">Message</Label>
-            <LInput placeholder="Say Hello" type="textarea" id="message" />
+            <LInput
+              placeholder="Say Hello"
+              type="textarea"
+              id="message"
+              name="message"
+            />
           </LInpCont>
         </FormContainer>
         <Button styleType="primary" type="submit">
