@@ -10,7 +10,12 @@ import {
 
 export function useSeasons(allEpisodes) {
   const allSeasons = selectedEverything(allEpisodes)
-  const startingState = { allSeasons, selected: "All", order: "DESC" }
+  const startingState = {
+    allSeasons,
+    selected: "All",
+    order: "DESC",
+    showNumber: 5,
+  }
 
   const [seasonState, dispatch] = useReducer(seasonDispatch, startingState)
 
@@ -40,6 +45,17 @@ export function useSeasons(allEpisodes) {
     else return desc
   }
 
+  function showNumber(number, allEpisodes, sortedEpisodes) {
+    console.log(seasonState)
+    dispatch({
+      type: "showMore",
+      payload: number,
+      allEpisodes,
+      sortedEpisodes,
+      sortedEpisodes,
+    })
+  }
+
   // Tags
   const seasonTags = seasonState.allSeasons.map(el => {
     return (
@@ -57,11 +73,13 @@ export function useSeasons(allEpisodes) {
 
   // Episode Filtering
   const filteredEpisodes = allEpisodes.filter(episode => {
-    const test = episode.season.some(el => el.title === selected)
+    // const test = episode.season.some(el => el.title === selected)
     return episode.season.some(el => el.title === selected)
   })
 
-  const sortedEpisodes = [...filteredEpisodes].sort(sortEpisodes())
+  const sortedEpisodes = [...filteredEpisodes]
+    .sort(sortEpisodes())
+    .slice(0, seasonState.showNumber)
 
   // Rectangle ContactCard
   const episodeList = sortedEpisodes.map(el => {
@@ -108,5 +126,6 @@ export function useSeasons(allEpisodes) {
     seasonState,
     updateOrder,
     sortedEpisodes,
+    showNumber,
   }
 }

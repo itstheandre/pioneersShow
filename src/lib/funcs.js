@@ -47,5 +47,22 @@ export function seasonDispatch(state, action) {
     case "orderEpisodes": {
       return { ...state, order: action.order }
     }
+    case "showMore": {
+      // console.log(action)
+      let addedVal
+      const valCheck =
+        action.allEpisodes.length - action.sortedEpisodes.length >=
+        action.payload
+
+      if (valCheck) {
+        addedVal = action.payload
+      } else {
+        addedVal = action.allEpisodes.length - action.sortedEpisodes.length
+      }
+      // console.log({ addedVal })
+      // console.log("When function is called", action.sortedEpisodes.length)
+      // if(state.)
+      return { ...state, showNumber: state.showNumber + addedVal }
+    }
   }
 }

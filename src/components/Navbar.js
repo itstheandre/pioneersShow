@@ -25,7 +25,7 @@ const Navbar = () => {
               <Link to="/team">Team</Link>
             </MenuItems> */}
             <MenuItems>
-              <Link to="/episodes">Episode List</Link>
+              <Link to="/episodes">Episodes</Link>
             </MenuItems>
             <MenuItems>
               <Link to="/contact">Contact</Link>

@@ -20,9 +20,11 @@ const EpisodePageComp = ({ allEpisodes }) => {
     seasonState,
     updateOrder,
     sortedEpisodes,
+    showNumber,
   } = useSeasons(allEpisodes)
-
-  console.log(sortedEpisodes)
+  const lengthCheck = allEpisodes.length - sortedEpisodes.length
+  // console.log(sortedEpisodes.length, "value after render")
+  // console.log(seasonState.showNumber)
 
   return (
     <div>
@@ -36,7 +38,16 @@ const EpisodePageComp = ({ allEpisodes }) => {
           <MainH2>Episodes</MainH2>
           <EpisodeTags>{seasonTags}</EpisodeTags>
           <EpisodeList>{episodeList}</EpisodeList>
-          <DifButton styleType="secondary">Load More</DifButton>
+          {lengthCheck ? (
+            <DifButton
+              styleType="secondary"
+              onClick={() => showNumber(2, allEpisodes, sortedEpisodes)}
+            >
+              Load More
+            </DifButton>
+          ) : (
+            ""
+          )}
         </EpisodeBody>
       </LayoutWrapper>
     </div>
