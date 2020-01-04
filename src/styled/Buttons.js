@@ -8,6 +8,7 @@ const Button = styled.button`
   height: ${buttons.height};
   padding: ${buttons.padding};
   font-size: ${buttons["font-size"]};
+  cursor: pointer;
   ${({ styleType }) =>
     styleType &&
     css`

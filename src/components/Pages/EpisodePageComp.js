@@ -33,15 +33,15 @@ const EpisodePageComp = ({ allEpisodes }) => {
       </EpisodePageHero>
       <LayoutWrapper>
         <EpisodeBody>
-          {/* <button onClick={() => updateOrder("ASC")}>Ascending</button>
-          <button onClick={() => updateOrder("DESC")}>Descending</button> */}
+          <button onClick={() => updateOrder("ASC")}>Ascending</button>
+          <button onClick={() => updateOrder("DESC")}>Descending</button>
           <MainH2>Episodes</MainH2>
           <EpisodeTags>{seasonTags}</EpisodeTags>
           <EpisodeList>{episodeList}</EpisodeList>
           {lengthCheck ? (
             <DifButton
               styleType="secondary"
-              onClick={() => showNumber(2, allEpisodes, sortedEpisodes)}
+              onClick={() => showNumber(2, sortedEpisodes)}
             >
               Load More
             </DifButton>

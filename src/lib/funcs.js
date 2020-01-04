@@ -45,7 +45,7 @@ export function seasonDispatch(state, action) {
       return { ...state, selected: action.inner, allSeasons: action.allSeasons }
     }
     case "orderEpisodes": {
-      return { ...state, order: action.order }
+      return { ...state, order: action.order, showNumber: 3 }
     }
     case "showMore": {
       // console.log(action)

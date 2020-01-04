@@ -45,7 +45,7 @@ export function useSeasons(allEpisodes) {
     else return desc
   }
 
-  function showNumber(number, allEpisodes, sortedEpisodes) {
+  function showNumber(number, sortedEpisodes) {
     console.log(seasonState)
     dispatch({
       type: "showMore",

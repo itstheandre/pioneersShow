@@ -4,7 +4,7 @@ import { MainH2, HomeBodyText } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
 import { HomeIcon, IconWrapper } from "../../styled/S_HomePage"
 import { Button } from "../../styled/Buttons"
-
+import { Link } from "gatsby"
 const SqWrapper = ({ lastThreeCards }) => {
   return (
     <>
@@ -18,9 +18,11 @@ const SqWrapper = ({ lastThreeCards }) => {
           show, or any other general inquiries, fill the form and we’ll try to
           get back to you.
         </HomeBodyText>
-        <Button type="submit" styleType="secondary">
-          Let's talk
-        </Button>
+        <Link to="/contact">
+          <Button type="submit" styleType="secondary">
+            Let's talk
+          </Button>
+        </Link>
       </IconWrapper>
     </>
   )

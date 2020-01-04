@@ -6,6 +6,7 @@ import { useSeasons } from "../../CustomHooks/useSeasons"
 import SqWrapper from "../Cards/SqWrapper"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
 import { Button } from "../../styled/Buttons"
+import { Link } from "gatsby"
 
 const IndexPageComp = ({ allEpisodes }) => {
   const { ref } = useWrapper()
@@ -16,7 +17,9 @@ const IndexPageComp = ({ allEpisodes }) => {
         <LayoutWrapper>
           <HomePageHeroText>
             <HeroH1>Real conversations with  the pioneers of today</HeroH1>
-            <Button styleType="primary">Listen to new episode</Button>
+            <Link to="/episodes">
+              <Button styleType="primary">Listen to new episode</Button>
+            </Link>
           </HomePageHeroText>
         </LayoutWrapper>
       </HomePageHero>
