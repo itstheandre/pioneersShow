@@ -33,8 +33,8 @@ const EpisodePageComp = ({ allEpisodes }) => {
       </EpisodePageHero>
       <LayoutWrapper>
         <EpisodeBody>
-          <button onClick={() => updateOrder("ASC")}>Ascending</button>
-          <button onClick={() => updateOrder("DESC")}>Descending</button>
+          {/* <button onClick={() => updateOrder("ASC")}>Ascending</button>
+          <button onClick={() => updateOrder("DESC")}>Descending</button> */}
           <MainH2>Episodes</MainH2>
           <EpisodeTags>{seasonTags}</EpisodeTags>
           <EpisodeList>{episodeList}</EpisodeList>
