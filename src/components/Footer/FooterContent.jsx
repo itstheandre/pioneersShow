@@ -10,12 +10,34 @@ const FooterContent = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <FooterLogos src={instagramLogo} />
-        <FooterLogos src={linkedInLogo} />
-        <FooterLogos src={twitterLogo} />
+        <a
+          href="https://www.instagram.com/pioneersshow"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FooterLogos src={instagramLogo} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/itstheandre"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FooterLogos src={linkedInLogo} />
+        </a>
+        <a
+          href="https://www.twitter.com/itstheandre"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FooterLogos src={twitterLogo} />
+        </a>
       </div>
     </>
   )
 }
+
+// ;<a href={link} target="_blank" rel="noopener noreferrer">
+//   <img src={img} alt={key} />
+// </a>
 
 export default FooterContent

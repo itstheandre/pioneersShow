@@ -20,6 +20,12 @@ const HomePageHeroText = styled.div`
   width: 70%;
 `
 
+const FlexedHomePagePart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
 const HeroH1 = styled.h1`
   font-size: 8rem;
   line-height: 12rem;
@@ -41,4 +47,11 @@ const HomeIcon = styled.img`
   margin-bottom: 6rem;
 `
 
-export { HomePageHero, HomePageHeroText, HeroH1, HomeIcon, IconWrapper }
+export {
+  HomePageHero,
+  HomePageHeroText,
+  HeroH1,
+  HomeIcon,
+  IconWrapper,
+  FlexedHomePagePart,
+}

@@ -8,7 +8,7 @@ import {
 } from "../../styled/S_EpisodePage"
 import { EpisodePageBG } from "../../utils/image-loader"
 import { useSeasons } from "../../CustomHooks/useSeasons"
-import { UpperCased, MainH2 } from "../../styled/Titles"
+import { UpperCased, MainH2, MainHeroTitle } from "../../styled/Titles"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
 import { DifButton } from "../../styled/Buttons"
 
@@ -17,7 +17,6 @@ const EpisodePageComp = ({ allEpisodes }) => {
   const {
     seasonTags,
     episodeList,
-    seasonState,
     updateOrder,
     sortedEpisodes,
     showNumber,
@@ -30,6 +29,7 @@ const EpisodePageComp = ({ allEpisodes }) => {
     <div>
       <EpisodePageHero img={EpisodePageBG} ref={ref}>
         <UpperCased>Episodes</UpperCased>
+        <MainHeroTitle>Have a listen to the podcast episodes</MainHeroTitle>
       </EpisodePageHero>
       <LayoutWrapper>
         <EpisodeBody>

@@ -12,14 +12,11 @@ import {
 import { Link } from "gatsby"
 import { GatsbyCleanup } from "../../styled/GatsbyCleanup"
 
-const RcContactCard = ({
-  img,
-  title,
-  runtime,
-  episodeNumber,
-  publishedDate,
-  slug,
-}) => {
+const RcContactCard = props => {
+  const { img, title, runtime, episodeNumber, publishedDate, slug } = props
+
+  console.log(typeof episodeNumber)
+
   return (
     // <G to={`/${slug}`}>
     <GatsbyCleanup>
@@ -35,7 +32,8 @@ const RcContactCard = ({
               {runtime}m | {publishedDate}
             </RqEpisodeDescription>
             <RqEpisodeTitle>
-              #{episodeNumber} - {title}
+              #{episodeNumber < 10 ? 0 : ""}
+              {episodeNumber} - {title}
             </RqEpisodeTitle>
           </EpisodeBody>
         </EpisodeSection>

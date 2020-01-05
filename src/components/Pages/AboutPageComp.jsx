@@ -23,7 +23,7 @@ const AboutPageComp = () => {
         <AboutContent>
           <AboutBodyText>
             This question haunts millions people all over the world, no matter
-            what country, education or even age.Figuring out a purpose is hard
+            what country, education or even age. Figuring out a purpose is hard
             for a lot of people, so follow along the interviews and conversation
             to figure out how these people did exactly that - or are still
             doing.

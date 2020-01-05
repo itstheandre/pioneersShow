@@ -2,13 +2,22 @@ import React from "react"
 import { SquareWrapper } from "../../styled/SqContentCard"
 import { MainH2, HomeBodyText } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
-import { HomeIcon, IconWrapper } from "../../styled/S_HomePage"
+import {
+  HomeIcon,
+  IconWrapper,
+  FlexedHomePagePart,
+} from "../../styled/S_HomePage"
 import { Button } from "../../styled/Buttons"
 import { Link } from "gatsby"
 const SqWrapper = ({ lastThreeCards }) => {
   return (
     <>
-      <MainH2>Latest Episodes </MainH2>
+      <FlexedHomePagePart>
+        <MainH2>Latest Episodes </MainH2>
+        <Link to="/episodes">
+          <Button styleType="secondary">See all</Button>
+        </Link>
+      </FlexedHomePagePart>
       <SquareWrapper>{lastThreeCards}</SquareWrapper>
       <IconWrapper>
         <HomeIcon src={LetterImg} alt="Letter" />

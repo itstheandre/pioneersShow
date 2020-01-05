@@ -1,9 +1,9 @@
 import React from "react"
 import Navbar from "./Navbar"
-import Footer from "./Footer/Footer"
 import "./layout.css"
 import { Body, ContentWrapper } from "../styled/S_Layout"
 import { WrapperProvider } from "../Context/WrapperContext"
+import { Helmet } from "react-helmet"
 
 import {
   spotifyColorLogo,
@@ -11,7 +11,7 @@ import {
   itunesColorLogo,
   youtubeColorLogo,
 } from "../utils/image-loader"
-import AboveFooterComp from "./Footer/AboveFooter"
+import BottomArea from "./Footer/BottomArea"
 
 const Layout = props => {
   const logos = [
@@ -40,16 +40,20 @@ const Layout = props => {
   ]
 
   return (
-    <WrapperProvider>
-      <Body>
-        <ContentWrapper>
-          <Navbar />
-          {props.children}
-        </ContentWrapper>
-        <AboveFooterComp logos={logos} />
-        <Footer />
-      </Body>
-    </WrapperProvider>
+    <div className="app">
+      <Helmet>
+        <title>Test</title>
+      </Helmet>
+      <WrapperProvider>
+        <Body>
+          <ContentWrapper>
+            <Navbar />
+            {props.children}
+          </ContentWrapper>
+          <BottomArea logos={logos} />
+        </Body>
+      </WrapperProvider>
+    </div>
   )
 }
 

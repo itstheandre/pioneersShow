@@ -5,6 +5,7 @@ module.exports = {
     author: `André de Albuquerque`,
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     `gatsby-plugin-react-helmet`,
     {
@@ -41,6 +42,39 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: [
+            "TTInterphases-MediumItalic",
+            "TTInterphases-BlackItalic",
+            "TTInterphases-DemiBold",
+            "TTInterphases-Light",
+            "TTInterphases-ExtraLightItalic",
+            "TTInterphases-ExtraBold",
+            "TTInterphases-ThinItalic",
+            "TTInterphases-LightItalic",
+            "TTInterphases-Regular",
+            "TTInterphases-ExtraLight",
+            "TTInterphases-Medium",
+            "TTInterphases-DemiBoldItalic",
+            "TTInterphases-Bold",
+            "TTInterphases-ExtraBoldItalic",
+            "TTInterphases-BoldItalic",
+            "TTInterphases-Black",
+            "TTInterphases-Italic",
+            "TTInterphases-Thin",
+            "TTInterphasesMono-Italic",
+            "TTInterphasesMono-BoldItalic",
+            "TTInterphasesMono-Regular",
+            "TTInterphasesMono-Bold",
+          ],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

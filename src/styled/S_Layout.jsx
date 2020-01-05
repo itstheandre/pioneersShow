@@ -77,7 +77,8 @@ const FooterLogos = styled.img`
 
 const Caption = styled.p`
   font-size: 1.5rem;
-  padding: 4rem;
+  padding: 4rem 0 1rem 0;
+  font-family: "Lato", sans-serif;
 `
 
 const StayConnected = styled.h4`

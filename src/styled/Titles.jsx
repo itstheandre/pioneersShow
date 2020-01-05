@@ -22,7 +22,8 @@ const MainHeroTitle = styled.h1`
 `
 
 const MainH2 = styled.h3`
-  /* font-size: ${normalH2.fontSize}; */
+  font-size: ${normalH2.fontSize};
+
   font-size: 40px;
   font-weight: ${normalH2.fontWeight};
   line-height: ${normalH2.lineHeight};

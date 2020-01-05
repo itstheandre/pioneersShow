@@ -21,6 +21,7 @@ const ContactBody = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
 `
 
 export { ContactHero, ContactBody }
