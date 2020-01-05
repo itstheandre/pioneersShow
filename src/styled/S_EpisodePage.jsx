@@ -6,7 +6,7 @@ const EpisodePageHero = styled.div`
   background: url(${({ img }) => img}) no-repeat;
   background-size: 100%;
   /* background-position: top; */
-  background-color: blue;
+  background-color: #1e3359;
   padding: 0;
   display: flex;
   flex-direction: column;

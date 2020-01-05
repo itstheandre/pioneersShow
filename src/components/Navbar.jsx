@@ -30,9 +30,9 @@ const Navbar = () => {
             <MenuItems>
               <Link to="/contact">Contact</Link>
             </MenuItems>
-            <MenuItems>
+            {/* <MenuItems>
               <Link to="/testing">Testing</Link>
-            </MenuItems>
+            </MenuItems> */}
           </MenuList>
         </div>
       </NavBarStyled>

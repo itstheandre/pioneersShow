@@ -8,7 +8,7 @@ const HomePageHero = styled.div`
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: blue;
+  background-color: #1e3359;
   padding: 0;
   display: flex;
   align-items: center;

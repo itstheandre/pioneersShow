@@ -10,6 +10,7 @@ const ContactHero = styled.div`
   justify-content: center;
   align-items: center;
   background: url(${({ img }) => img}) no-repeat;
+  background-color: #1e3359;
   background-size: cover;
   background-position: center;
   /* padding: 0; */
