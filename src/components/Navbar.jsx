@@ -33,6 +33,9 @@ const Navbar = () => {
             <MenuItems>
               <Link to="/testing">Testing</Link>
             </MenuItems>
+            <MenuItems>
+              <Link to="/mobile">Mobile</Link>
+            </MenuItems>
           </MenuList>
         </div>
       </NavBarStyled>

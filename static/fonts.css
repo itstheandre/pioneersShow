@@ -83,6 +83,8 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3acb7f");
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 @font-face {
   font-family: "TTInterphases-MediumItalic";
