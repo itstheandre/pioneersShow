@@ -36,30 +36,32 @@ const MyMobileNav = styled.nav`
   .nav {
     height: 12rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     top: 0;
+    margin: 0 auto;
   }
 
   .navWrapper {
     height: 100%;
-    display: flex;
     width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    color: white;
     padding: 0 5rem;
-    /* margin: 0 5rem; */
-    /* width: 100%; */
-    /* display: flex; */
-    /* flex-flow: row nowrap; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* color: white; */
-    /* padding: 0 5rem; */
-    /* margin: 5rem auto; */
+    margin: 0 auto;
+    /* @media screen and (max-width: 479px) {
+      padding: 0 1vw;
+    } */
   }
 
   .logo {
+    height: 4rem;
+    display: flex;
+    align-items: center;
     visibility: hidden;
     img {
       height: 100%;
@@ -84,7 +86,7 @@ const MyMobileNav = styled.nav`
 //   }
 // `
 
-const Mobile = ({ links, displayMobile, toggle }) => {
+const Mobile = ({ displayMobile, toggle }) => {
   return (
     <MyMobileNav displayMobile={displayMobile}>
       <div className="nav">
@@ -97,7 +99,7 @@ const Mobile = ({ links, displayMobile, toggle }) => {
           </MyXButton>
         </div>
       </div>
-      <NavLinks links={links} isMobileLink={!displayMobile} />
+      <NavLinks isMobileLink={!displayMobile} />
     </MyMobileNav>
   )
 }

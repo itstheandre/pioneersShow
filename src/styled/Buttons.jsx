@@ -17,6 +17,11 @@ const Button = styled.button`
       color: ${({ styleType }) => buttons.text[styleType]};
       border: ${({ styleType }) => buttons.borders[styleType]};
     `};
+
+  @media screen and (max-width: 780px) {
+    font-size: 2vh;
+    width: 100%;
+  }
 `
 
 const DifButton = styled(Button)`

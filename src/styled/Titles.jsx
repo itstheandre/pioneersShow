@@ -31,6 +31,14 @@ const MainH2 = styled.h3`
   text-align: center;
 `
 
+const TestH2 = styled(MainH2)`
+  @media screen and (max-width: 479px) {
+    font-size: 4vh;
+    line-height: 6vh;
+    text-align: left;
+  }
+`
+
 const ResponsiveH2 = styled(MainH2)`
   /* width: 100%; */
   text-align: center;
@@ -57,4 +65,5 @@ export {
   MainH2,
   AboutBodyText,
   HomeBodyText,
+  TestH2,
 }

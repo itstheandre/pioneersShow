@@ -20,13 +20,6 @@ const MyNavTest = styled.nav`
   justify-content: flex-start;
 `
 
-const MenuLinks = [
-  { to: "/index1", title: "Home" },
-  { to: "/about", title: "About" },
-  { to: "/episodes", title: "Episodes" },
-  { to: "/contact", title: "Contact" },
-]
-
 const MyNavBar = () => {
   const [displayMobile, setDisplayMobile] = useState(false)
   const { inView } = useWrapper()
@@ -53,16 +46,11 @@ const MyNavBar = () => {
       <GlobalStyle />
       <MyNavTest>
         <Desktop
-          links={MenuLinks}
           toggle={toggle}
           displayMobile={displayMobile}
           inView={inView}
         />
-        <Mobile
-          links={MenuLinks}
-          displayMobile={displayMobile}
-          toggle={toggle}
-        />
+        <Mobile displayMobile={displayMobile} toggle={toggle} />
       </MyNavTest>
     </>
   )

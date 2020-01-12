@@ -5,11 +5,20 @@ import {
   linkedInLogo,
   twitterLogo,
 } from "../../utils/image-loader"
+import styled from "styled-components"
+
+const FooterLogosWrapper = styled.div`
+  display: flex;
+
+  a {
+    cursor: pointer;
+  }
+`
 
 const FooterContent = () => {
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <FooterLogosWrapper style={{ display: "flex" }}>
         <a
           href="https://www.instagram.com/pioneersshow"
           target="_blank"
@@ -31,7 +40,7 @@ const FooterContent = () => {
         >
           <FooterLogos src={twitterLogo} />
         </a>
-      </div>
+      </FooterLogosWrapper>
     </>
   )
 }

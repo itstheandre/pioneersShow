@@ -7,6 +7,8 @@ const SquareWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 15rem;
+  /* background-color: blue; */
+  width: 100%;
 `
 
 const ContentSection = styled.div`

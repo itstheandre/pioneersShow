@@ -1,12 +1,12 @@
 import React from "react"
 import { menuLinksFunc } from "../../lib/menuLinks"
 
-const NavLinks = ({ links, isMobileLink }) => {
+const NavLinks = ({ isMobileLink }) => {
   let tmpIndex
   if (isMobileLink) {
     tmpIndex = -1
   }
-  const navLi = menuLinksFunc(links, tmpIndex)
+  const navLi = menuLinksFunc(tmpIndex)
 
   return <ul className="navLinks">{navLi}</ul>
 }

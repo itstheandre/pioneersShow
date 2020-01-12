@@ -1,6 +1,6 @@
 import React from "react"
 import { SquareWrapper } from "../../styled/SqContentCard"
-import { MainH2, HomeBodyText } from "../../styled/Titles"
+import { MainH2, HomeBodyText, TestH2 } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
 import {
   HomeIcon,
@@ -13,7 +13,7 @@ const SqWrapper = ({ lastThreeCards }) => {
   return (
     <>
       <FlexedHomePagePart>
-        <MainH2>Latest Episodes </MainH2>
+        <TestH2>Latest Episodes </TestH2>
         <Link to="/episodes">
           <Button styleType="secondary">See all</Button>
         </Link>

@@ -18,6 +18,7 @@ const FooterComponent = styled.footer`
 
 const FooterLogos = styled.img`
   padding: 1rem 3rem;
+  cursor: pointer;
 `
 
 const Caption = styled.p`
