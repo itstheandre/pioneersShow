@@ -17,7 +17,7 @@ const EpisodePageComp = ({ allEpisodes }) => {
   const {
     seasonTags,
     episodeList,
-    updateOrder,
+    // updateOrder,
     sortedEpisodes,
     showNumber,
   } = useSeasons(allEpisodes)

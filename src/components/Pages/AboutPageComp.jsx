@@ -7,6 +7,7 @@ import {
 } from "../../styled/S_AboutPage"
 import { AboutPageBG } from "../../utils/image-loader"
 import { UpperCased, MainHeroTitle, AboutBodyText } from "../../styled/Titles"
+
 const AboutPageComp = () => {
   const { ref } = useWrapper()
   const data = useWrapper()

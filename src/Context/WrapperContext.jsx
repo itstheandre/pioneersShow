@@ -7,7 +7,7 @@ const WrapperContextProvider = WrapperContext.Provider
 export function WrapperProvider({ children }) {
   const [ref, inView] = useInView({
     /* Optional options */
-    rootMargin: "-92px",
+    rootMargin: "-56px",
   })
 
   const [count, setCount] = useState(0)

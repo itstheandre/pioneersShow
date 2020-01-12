@@ -1,6 +1,11 @@
 import imageTest from "../assets/images/Img.png"
 import elipse from "../assets/images/icons/Ellipse.png"
 
+//MobileMenu
+import menuWhite from "../assets/images/menu-white.svg"
+import menuBlack from "../assets/images/menu-black.svg"
+import closeX from "../assets/images/CloseX.svg"
+
 // Footer
 import instagramLogo from "../assets/images/instagram-logo.png"
 import linkedInLogo from "../assets/images/linkedin-logo.png"
@@ -46,4 +51,7 @@ export {
   imageTest,
   elipse,
   LetterImg,
+  menuWhite,
+  menuBlack,
+  closeX,
 }

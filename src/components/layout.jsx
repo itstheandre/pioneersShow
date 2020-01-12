@@ -1,21 +1,27 @@
 import React from "react"
 import Navbar from "./Navbar"
+// import "./layout.css"
 import { Body, ContentWrapper } from "../styled/S_Layout"
-import { Helmet } from "react-helmet"
 import logos from "../lib/logos"
 import BottomArea from "./Footer/BottomArea"
-import styled, { createGlobalStyle } from "styled-components"
+import GlobalStyle from "../styled/GlobalStyle"
+import MyNavBar from "./navigation/NavTest"
+
+// Bold
+// Extra Bold
+// Regular
 
 const Layout = props => {
+  // function toggle() {
+  //   setDisplayMobile(!displayMobile)
+  // }
+
   return (
     <div className="app">
       <GlobalStyle />
-      <Helmet>
-        <title>Test</title>
-      </Helmet>
       <Body>
         <ContentWrapper>
-          <Navbar />
+          <MyNavBar />
           {props.children}
         </ContentWrapper>
         <BottomArea logos={logos} />
@@ -25,24 +31,3 @@ const Layout = props => {
 }
 
 export default Layout
-
-const GlobalStyle = createGlobalStyle`
-* {
-   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 8px;
-  --lora: Lora, "serif";
-  --tt: TTInterphases-Regular, Lato, sans-serif
-}
-
-body {
-  font-family: var(--tt)
-}
-
-.p {
-  font-family: var(--lora)
-}
-`

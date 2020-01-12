@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import HomePageComp from "../components/Pages/HomePageComp"
-import { useSeasons } from "../CustomHooks/useSeasons"
 
 export const query = graphql`
   {

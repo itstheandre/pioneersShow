@@ -24,12 +24,8 @@ const NavBarStyled = styled.nav`
   align-items: center;
   padding: 0 3rem;
   margin: 0 auto;
-  ${({ change }) =>
-    change &&
-    css`
-      background-color: ${({ change }) => navBar.background[change]};
-      box-shadow: ${({ change }) => navBar.shadow[change]};
-    `}
+  box-shadow: ${({ change }) => navBar.shadow[change]};
+  background-color: ${({ change }) => navBar.background[change]};
 `
 
 const MenuList = styled.ul`
@@ -37,20 +33,23 @@ const MenuList = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+ 
   a {
     height: 2.5rem;
     font-size: 2.25rem;
     text-decoration: none;
-    ${({ change }) =>
-      change &&
-      css`
-        color: ${({ change }) => navBar.text[change]};
-      `}
+    color: ${({ change }) => (change ? navBar.text.true : navBar.text.false)};
+      /* ${({ change }) =>
+        change &&
+        css`
+          color: ${({ change }) => navBar.text[change]};
+        `}; */
   }
 `
 
 const MenuItems = styled.li`
   padding: 0 3rem;
+  text-decoration: none;
 `
 
 const NavLogo = styled.img`

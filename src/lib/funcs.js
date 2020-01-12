@@ -64,5 +64,8 @@ export function seasonDispatch(state, action) {
       // if(state.)
       return { ...state, showNumber: state.showNumber + addedVal }
     }
+    default: {
+      return
+    }
   }
 }

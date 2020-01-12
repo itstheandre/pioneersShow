@@ -74,7 +74,7 @@ const navBar = {
   },
   text: {
     true: `${palette.white}`,
-    false: `${textStyle.navBarSecondary}`,
+    false: `${palette.background}`,
   },
   shadow: {
     true: "none",
@@ -85,7 +85,8 @@ const navBar = {
 const tags = {
   font: "2rem",
   height: "4rem",
-  padding: `${generalElements.padding}`,
+  padding: `2rem`,
+  // padding: `${generalElements.padding}`,
   borderRadius: "40px",
   background: {
     selected: `${palette.secondary}`,

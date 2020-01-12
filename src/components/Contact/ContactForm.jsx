@@ -9,7 +9,7 @@ import {
   IndInpCont,
 } from "../../styled/Forms"
 import { Button } from "../../styled/Buttons"
-import { LayoutWrapper } from "../../styled/LayoutWrapper"
+// import { LayoutWrapper } from "../../styled/LayoutWrapper"
 
 const ContactForm = () => {
   return (

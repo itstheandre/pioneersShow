@@ -5,11 +5,17 @@ import { NavBarStyled, MenuList, NavLogo, MenuItems } from "../styled/S_Layout"
 // import Button from "../../styled-components/Buttons"
 import { useWrapper } from "../Context/WrapperContext"
 
+// const NavTest = styled.nav`
+//   display: flex;
+// `
+
 const Navbar = () => {
   const { inView } = useWrapper()
 
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
-  const change = inView ? "true" : "false"
+  // const change = inView ? "true" : "false"
+  const change = inView ? true : false
+  console.log(change)
   return (
     <>
       <NavBarStyled change={change}>
@@ -34,7 +40,7 @@ const Navbar = () => {
               <Link to="/testing">Testing</Link>
             </MenuItems>
             <MenuItems>
-              <Link to="/mobile">Mobile</Link>
+              <Link to="/playing">Playing</Link>
             </MenuItems>
           </MenuList>
         </div>

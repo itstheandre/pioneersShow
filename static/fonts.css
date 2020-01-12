@@ -96,6 +96,24 @@
 }
 
 @font-face {
+  font-family: "TTInterphases-ExtraBold";
+  src: url("webfonts/3ACB7F_5_0.eot");
+  src: url("webfonts/3ACB7F_5_0.eot?#iefix") format("embedded-opentype"),
+    url("webfonts/3ACB7F_5_0.woff2") format("woff2"),
+    url("webfonts/3ACB7F_5_0.woff") format("woff"),
+    url("webfonts/3ACB7F_5_0.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: "Fira Mono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../src/fonts/fira_mono-regular-webfont.woff2") format("woff2"),
+    url("../src/fonts/fira_mono-regular-webfont.woff") format("woff");
+  font-display: swap;
+} */
+
+@font-face {
   font-family: "TTInterphases-BlackItalic";
   src: url("webfonts/3ACB7F_1_0.eot");
   src: url("webfonts/3ACB7F_1_0.eot?#iefix") format("embedded-opentype"),
@@ -129,15 +147,6 @@
     url("webfonts/3ACB7F_4_0.woff2") format("woff2"),
     url("webfonts/3ACB7F_4_0.woff") format("woff"),
     url("webfonts/3ACB7F_4_0.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "TTInterphases-ExtraBold";
-  src: url("webfonts/3ACB7F_5_0.eot");
-  src: url("webfonts/3ACB7F_5_0.eot?#iefix") format("embedded-opentype"),
-    url("webfonts/3ACB7F_5_0.woff2") format("woff2"),
-    url("webfonts/3ACB7F_5_0.woff") format("woff"),
-    url("webfonts/3ACB7F_5_0.ttf") format("truetype");
 }
 
 @font-face {
