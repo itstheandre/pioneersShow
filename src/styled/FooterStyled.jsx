@@ -34,9 +34,13 @@ const AboveParent = styled.div`
   display: flex;
   justify-content: center;
   margin: 15rem 0;
+  @media screen and (max-width: 768px) {
+    margin: 10vh 0;
+  }
 `
 
 const AboveBody = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,16 +48,30 @@ const AboveBody = styled.div`
 `
 
 const LogosWrapper = styled.div`
+  width: 80%;
   display: flex;
+  /* flex-flow: row wrap; */
+  justify-content: center;
+  margin: 3rem auto;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem auto;
+  width: 80%; */
+  @media screen and (max-width: 479px) {
+    flex-flow: row wrap;
+  }
 `
 
 const SubscriptionDiv = styled.div`
   padding: 0 2.5em;
-  & img {
+  img {
     height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 2.5vw;
+  }
+  @media screen and (max-width: 479px) {
+    padding: 1vh 3vw;
   }
 `
 

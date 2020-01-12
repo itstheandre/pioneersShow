@@ -59,7 +59,6 @@ const NavLogo = styled.img`
 //FOOTER
 
 const FooterComponent = styled.footer`
-  padding-top: 3rem;
   background-color: ${palette.footer};
   bottom: 0;
   width: 100vw;
@@ -72,15 +71,22 @@ const FooterComponent = styled.footer`
 
 const FooterLogos = styled.img`
   padding: 1rem 3rem;
+  @media screen and (max-width: 479px) {
+    padding: 1vh 3vw;
+  }
 `
 
 const Caption = styled.p`
   font-size: 1.5rem;
   padding: 4rem 0 1rem 0;
+  width: 40vw;
+  text-align: center;
   font-family: "Lato", sans-serif;
 `
 
 const StayConnected = styled.h4`
+  width: 80%;
+  text-align: center;
   padding: 2rem;
   font-size: 2.25rem;
 `

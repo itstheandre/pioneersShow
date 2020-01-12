@@ -3,7 +3,8 @@ import allStyles from "./Theme"
 const { palette } = allStyles
 
 const HomePageHero = styled.div`
-  height: 107rem;
+  /* height: 107rem; */
+  height: 95vh;
   width: 100vw;
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
@@ -13,11 +14,13 @@ const HomePageHero = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 17rem;
+  font-family: var(--tt-bold);
 `
 
 const HomePageHeroText = styled.div`
   /* display: flex; */
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
 `
 
 const FlexedHomePagePart = styled.div`

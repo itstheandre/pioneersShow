@@ -28,6 +28,13 @@ const MainH2 = styled.h3`
   font-weight: ${normalH2.fontWeight};
   line-height: ${normalH2.lineHeight};
   color: ${normalH2.color};
+  text-align: center;
+`
+
+const ResponsiveH2 = styled(MainH2)`
+  /* width: 100%; */
+  text-align: center;
+  /* text-align: start; */
 `
 
 const AboutBodyText = styled.p`
@@ -43,4 +50,11 @@ const HomeBodyText = styled(AboutBodyText)`
   margin: 2rem 0;
 `
 
-export { UpperCased, MainHeroTitle, MainH2, AboutBodyText, HomeBodyText }
+export {
+  UpperCased,
+  ResponsiveH2,
+  MainHeroTitle,
+  MainH2,
+  AboutBodyText,
+  HomeBodyText,
+}

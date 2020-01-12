@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: var(--tt-reg);
- 
+
 }
 
 .p {
