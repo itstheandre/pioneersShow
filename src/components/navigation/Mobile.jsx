@@ -54,6 +54,10 @@ const MyMobileNav = styled.nav`
     } */
   }
 
+  .test {
+    margin-top: 15vh;
+  }
+
   .logo {
     height: 4rem;
     display: flex;
@@ -95,7 +99,9 @@ const Mobile = ({ displayMobile, toggle }) => {
           </MyXButton>
         </div>
       </div>
-      <NavLinks isMobileLink={!displayMobile} />
+      <div className="test">
+        <NavLinks isMobileLink={!displayMobile} />
+      </div>
     </MyMobileNav>
   )
 }
