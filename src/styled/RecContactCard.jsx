@@ -3,7 +3,8 @@ import allStyles from "./Theme"
 const { palette } = allStyles
 
 const EpisodeSection = styled.div`
-  width: 66rem;
+  /* width: 66rem; */
+  width: 100%;
   height: 9rem;
   margin: 3rem 0 3rem 0;
   display: flex;

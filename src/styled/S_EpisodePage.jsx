@@ -1,7 +1,9 @@
 import styled from "styled-components"
 
+import { MainH2 } from "./Titles"
+
 const EpisodePageHero = styled.div`
-  height: 62rem;
+  height: 60vh;
   width: 100vw;
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
@@ -12,6 +14,9 @@ const EpisodePageHero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    height: 70vh;
+  }
 `
 
 const EpisodeTags = styled.div`
@@ -26,13 +31,18 @@ const EpisodeTags = styled.div`
 
 const EpisodeBody = styled.div`
   margin: 17rem auto;
-  width: 50%;
+  width: 100%;
+`
+
+const EpisodeTitle = styled(MainH2)`
+  text-align: left;
 `
 
 const EpisodeList = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+  width: 100%;
 `
 
-export { EpisodePageHero, EpisodeTags, EpisodeBody, EpisodeList }
+export { EpisodePageHero, EpisodeTitle, EpisodeTags, EpisodeBody, EpisodeList }

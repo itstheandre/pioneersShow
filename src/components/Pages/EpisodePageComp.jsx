@@ -5,10 +5,11 @@ import {
   EpisodeTags,
   EpisodeBody,
   EpisodeList,
+  EpisodeTitle,
 } from "../../styled/S_EpisodePage"
 import { EpisodePageBG } from "../../utils/image-loader"
 import { useSeasons } from "../../CustomHooks/useSeasons"
-import { UpperCased, MainH2, MainHeroTitle } from "../../styled/Titles"
+import { UpperCased, TestH2, MainHeroTitle } from "../../styled/Titles"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
 import { DifButton } from "../../styled/Buttons"
 
@@ -37,7 +38,7 @@ const EpisodePageComp = ({ allEpisodes }) => {
         <EpisodeBody>
           {/* <button onClick={() => updateOrder("ASC")}>Ascending</button>
           <button onClick={() => updateOrder("DESC")}>Descending</button> */}
-          <MainH2>Episodes</MainH2>
+          <EpisodeTitle>Episodes</EpisodeTitle>
           <EpisodeTags>{seasonTags}</EpisodeTags>
           <EpisodeList>{episodeList}</EpisodeList>
           {lengthCheck ? (
