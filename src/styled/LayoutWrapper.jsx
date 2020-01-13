@@ -6,7 +6,7 @@ const LayoutWrapper = styled.div`
   max-width: 825px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: column;
 
   @media screen and (max-width: 900px) {
     max-width: 70%;

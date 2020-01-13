@@ -32,6 +32,11 @@ const EpisodeTags = styled.div`
 const EpisodeBody = styled.div`
   margin: 17rem auto;
   width: 100%;
+  max-width: 70vw;
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 1vh;
+  }
 `
 
 const EpisodeTitle = styled(MainH2)`
