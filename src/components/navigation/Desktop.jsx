@@ -18,7 +18,7 @@ const Desktop = ({ toggle, displayMobile, inView }) => {
     <DesktopNav inView={inView} change={change}>
       <div className="navWrapper">
         <div className="centerEverything">
-          <Link to="/index1">
+          <Link to="/">
             <div className="logo">
               <img src={logo} />
             </div>

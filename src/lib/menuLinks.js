@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const MenuLinks = [
-  { to: "/index1", title: "Home" },
+  { to: "/", title: "Home" },
   { to: "/about", title: "About" },
   { to: "/episodes", title: "Episodes" },
   { to: "/contact", title: "Contact" },
