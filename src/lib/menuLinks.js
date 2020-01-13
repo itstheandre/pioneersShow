@@ -6,7 +6,7 @@ const MenuLinks = [
   { to: "/about", title: "About" },
   { to: "/episodes", title: "Episodes" },
   { to: "/contact", title: "Contact" },
-  { to: "/testing", title: "Testing" },
+  // { to: "/testing", title: "Testing" },
 ]
 
 export function menuLinksFunc(tmpIndex) {
