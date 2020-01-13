@@ -7,13 +7,18 @@ const SquareWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 15rem;
-  /* background-color: blue; */
+  background-color: blue;
   width: 100%;
+  height: 30vh;
 `
 
 const ContentSection = styled.div`
-  height: 43rem;
-  width: 43rem;
+  /* height: 43rem; */
+  /* height: 100%; */
+  /* width: auto; */
+  height: 35rem;
+  width: 35rem;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   box-shadow: ${palette.boxShadow};
@@ -23,7 +28,7 @@ const ContentSection = styled.div`
 
 const ContentImage = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 70%;
   background: url(${({ img }) => img}) no-repeat;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -40,7 +45,7 @@ const ContentOverlay = styled.div`
 
 const ContentBody = styled.div`
   font-size: 1.5rem;
-  height: 13rem;
+  height: auto;
   color: ${palette.secondaryText};
   /* padding: 2rem 3rem; */
   display: flex;

@@ -28,8 +28,10 @@ const EpisodePageComp = ({ allEpisodes }) => {
   return (
     <div>
       <EpisodePageHero img={EpisodePageBG} ref={ref}>
-        <UpperCased>Episodes</UpperCased>
-        <MainHeroTitle>Have a listen to the podcast episodes</MainHeroTitle>
+        <LayoutWrapper>
+          <UpperCased>Episodes</UpperCased>
+          <MainHeroTitle>Have a listen to the podcast episodes</MainHeroTitle>
+        </LayoutWrapper>
       </EpisodePageHero>
       <LayoutWrapper>
         <EpisodeBody>

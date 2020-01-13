@@ -7,6 +7,7 @@ import {
   menuBlack,
 } from "../../utils/image-loader"
 import NavLinks from "./NavLinks"
+import { Link } from "gatsby"
 
 const Desktop = ({ toggle, displayMobile, inView }) => {
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
@@ -17,9 +18,11 @@ const Desktop = ({ toggle, displayMobile, inView }) => {
     <DesktopNav inView={inView} change={change}>
       <div className="navWrapper">
         <div className="centerEverything">
-          <div className="logo">
-            <img src={logo} />
-          </div>
+          <Link to="/index1">
+            <div className="logo">
+              <img src={logo} />
+            </div>
+          </Link>
           <NavLinks inView={inView} />
           <MobileNavButton displayMobile={displayMobile}>
             <img src={menuItem} alt="mobileNav" onClick={toggle} />

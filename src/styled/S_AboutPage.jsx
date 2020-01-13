@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const AboutPageHero = styled.div`
-  height: 62rem;
+  height: 55vh;
   width: 100vw;
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
@@ -11,11 +11,15 @@ const AboutPageHero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 479px) {
+    height: 65vh;
+  }
 `
 
 const AboutBody = styled.div`
   /* background-color: orange; */
-  margin-top: 17rem;
+  width: 100%;
+  margin: 17rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +27,11 @@ const AboutBody = styled.div`
 `
 
 const AboutContent = styled.div`
-  text-align: justify;
-  width: 40%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
   /* & p {
     font-size: 2rem;
     line-height: 3rem;

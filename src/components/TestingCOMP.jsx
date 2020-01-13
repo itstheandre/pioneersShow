@@ -11,8 +11,16 @@ const TestingGround = ({ allEpisodes }) => {
   return (
     <>
       <div style={{ height: "100rem", backgroundColor: "red" }}>Hi</div>
-      <SqEpisodeCard img={imageTest} title="Season 1" episodeNumber="00" />
-      <RcContactCard img={imageTest} title="Season 2" />
+      <div style={{ width: "200px" }}>
+        <SqEpisodeCard
+          img={imageTest}
+          title="Season 1"
+          episodeNumber="00"
+          runtime="65m"
+          publishedDate="Yesterday"
+        />
+      </div>
+      {/* <RcContactCard img={imageTest} title="Season 2" /> */}
 
       <div style={{ height: "100rem", backgroundColor: "red" }}>Hi</div>
       <div style={{ height: "100rem", backgroundColor: "blue" }}>Hi</div>

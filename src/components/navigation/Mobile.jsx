@@ -1,11 +1,7 @@
 import React from "react"
 import NavLinks from "./NavLinks"
 import styled from "styled-components"
-import {
-  pioneersWhiteLogo,
-  pioneersColorLogo,
-  closeX,
-} from "../../utils/image-loader"
+import { pioneersWhiteLogo, closeX } from "../../utils/image-loader"
 
 const MyMobileNav = styled.nav`
   background-color: rgba(30, 51, 89, 0.9);
@@ -92,7 +88,7 @@ const Mobile = ({ displayMobile, toggle }) => {
       <div className="nav">
         <div className="navWrapper">
           <div className="logo">
-            <img src={pioneersColorLogo} />
+            <img src={pioneersWhiteLogo} alt="blank" />
           </div>
           <MyXButton>
             <img src={closeX} alt="X" onClick={toggle} />

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import {
   Label,
   SInput,
@@ -7,14 +7,35 @@ import {
   LInpCont,
   FormContainer,
   IndInpCont,
+  TargetContainer,
+  Form,
 } from "../../styled/Forms"
 import { Button } from "../../styled/Buttons"
 // import { LayoutWrapper } from "../../styled/LayoutWrapper"
 
 const ContactForm = () => {
+  const [subject, setSubject] = useState(false)
+
+  useEffect(() => {
+    function checkAndAutoHide() {
+      const screen = window.innerWidth
+      if (screen > 900) {
+        console.log("oi?")
+        setSubject(true)
+      }
+    }
+    window.addEventListener("resize", checkAndAutoHide)
+
+    return () => window.removeEventListener("resize", checkAndAutoHide)
+  }, [subject])
+
+  const subjectText = subject
+    ? "What's the subject of your message?"
+    : "If you had to explain your message in one sentence"
+
   return (
     <>
-      <form
+      <Form
         name="contact"
         method="post"
         action="/thanks"
@@ -24,32 +45,27 @@ const ContactForm = () => {
         {" "}
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <FormContainer>
+        <TargetContainer>
           <IndInpCont>
             <Label htmlFor="name">Name*</Label>
-            <SInput
-              type="text"
-              placeholder="Your street name"
-              id="name"
-              name="name"
-            />
+            <SInput type="text" placeholder="Your name" id="name" name="name" />
           </IndInpCont>
           <IndInpCont>
             <Label htmlFor="email">Email*</Label>
             <SInput
               type="email"
-              placeholder="Your digital address"
+              placeholder="Your email"
               id="email"
               name="email"
             />
           </IndInpCont>
-        </FormContainer>
+        </TargetContainer>
         <FormContainer>
           <IndInpCont>
             <Label htmlFor="subject">Subject</Label>
             <MInput
               type="text"
-              placeholder="If you had to explain your message in one sentence"
+              placeholder={subjectText}
               id="subject"
               name="subject"
             />
@@ -69,7 +85,7 @@ const ContactForm = () => {
         <Button styleType="primary" type="submit">
           Submit
         </Button>
-      </form>
+      </Form>
     </>
   )
 }

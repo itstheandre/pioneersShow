@@ -11,13 +11,17 @@ const UpperCased = styled.h3`
   font-weight: ${h4.fontWeight};
   text-transform: uppercase;
   margin: ${h4.margin};
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 10vh;
+  }
 `
 
 const MainHeroTitle = styled.h1`
   font-size: ${h2.fontSize};
   line-height: ${h2.lineHeight};
   color: ${color.white};
-  width: 87.5rem;
+  width: 100%;
   text-align: center;
 `
 
@@ -50,6 +54,7 @@ const AboutBodyText = styled.p`
   line-height: 3rem;
   padding: 0;
   margin: 2rem 0;
+  text-align: justify;
 `
 
 const HomeBodyText = styled(AboutBodyText)`
