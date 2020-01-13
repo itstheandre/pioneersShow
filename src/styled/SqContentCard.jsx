@@ -3,37 +3,49 @@ import allStyles from "./Theme"
 const { palette } = allStyles
 
 const SquareWrapper = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15rem;
-  background-color: blue;
+  height: 100%;
   width: 100%;
-  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rem;
+
+  @media screen and (max-width: 1100px) {
+    justify-content: space-evenly;
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-bottom: 8vh;
+  }
 `
 
 const ContentSection = styled.div`
-  /* height: 43rem; */
-  /* height: 100%; */
-  /* width: auto; */
-  height: 35rem;
-  width: 35rem;
-  /* width: 100%; */
-  display: flex;
-  flex-direction: column;
-  box-shadow: ${palette.boxShadow};
-  border-radius: 6px;
-  margin: 1.5rem;
+  height: 100%;
+  margin: 5vh auto;
+  width: 15vw;
+  @media screen and (max-width: 1380) {
+    width: 45vw;
+    margin: 5vh 55vw;
+    /* margin-bottom: 5vh; */
+  }
+  @media screen and (max-width: 1100px) {
+    /* justify-content: center; */
+    margin: 3vh auto;
+  }
+  @media screen and (max-width: 900px) {
+    width: 40vw;
+  }
 `
 
 const ContentImage = styled.div`
   width: 100%;
-  height: 70%;
+  height: 20vh;
   background: url(${({ img }) => img}) no-repeat;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: 1100px) {
+  }
 `
 
 const ContentOverlay = styled.div`
@@ -44,24 +56,20 @@ const ContentOverlay = styled.div`
 `
 
 const ContentBody = styled.div`
+  /* min-width: 200px; */
+  width: 100%;
   font-size: 1.5rem;
   height: auto;
   color: ${palette.secondaryText};
-  /* padding: 2rem 3rem; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  & * {
-    padding: 1rem 3rem;
-  }
 `
 
 const EpisodeDescription = styled.h4`
   font-size: 1.5rem;
   padding-top: 2rem;
-  /* padding: 0 3rem; */
-  /* padding: 0 3rem 2rem 3rem; */
 `
 
 const EpisodeTitle = styled.h3`
