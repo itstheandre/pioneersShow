@@ -81,7 +81,7 @@ const Caption = styled.p`
   padding: 4rem 0 1rem 0;
   width: 40vw;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: var(--tt-reg);
 `
 
 const StayConnected = styled.h4`

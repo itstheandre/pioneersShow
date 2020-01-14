@@ -20,7 +20,7 @@ const Button = styled.button`
 
   @media screen and (max-width: 780px) {
     font-size: 2vh;
-    width: 100%;
+    width: auto;
   }
 `
 

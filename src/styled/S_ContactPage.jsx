@@ -23,7 +23,7 @@ const ContactBody = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--lora);
 
   p {
     margin-right: 10vw;

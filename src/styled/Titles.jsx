@@ -8,7 +8,7 @@ const UpperCased = styled.h3`
   font-size: ${h4.fontSize};
   color: ${color.white};
   letter-spacing: ${h4.letterSpacing};
-  font-weight: ${h4.fontWeight};
+  /* font-weight: ${h4.fontWeight}; */
   text-transform: uppercase;
   margin: ${h4.margin};
   text-align: center;
@@ -23,6 +23,7 @@ const MainHeroTitle = styled.h1`
   color: ${color.white};
   width: 100%;
   text-align: center;
+  font-family: var(--tt-extra);
 `
 
 const MainH2 = styled.h3`
@@ -55,6 +56,7 @@ const AboutBodyText = styled.p`
   padding: 0;
   margin: 2rem 0;
   text-align: justify;
+  font-family: var(--lora);
 `
 
 const HomeBodyText = styled(AboutBodyText)`

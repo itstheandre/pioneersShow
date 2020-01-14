@@ -20,6 +20,10 @@ body {
 
 }
 
+button {
+  font-family: var(--tt-reg)
+}
+
 .p {
   font-family: var(--lora)
 }

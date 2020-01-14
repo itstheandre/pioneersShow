@@ -53,6 +53,9 @@ const SInput = styled.input`
   border-radius: 4px;
   border: none;
   width: 100%;
+
+  font-family: var(--tt-reg);
+
   /* width: 31.5rem; */
   &::placeholder {
     color: ${forms.placeHolder};
@@ -72,6 +75,8 @@ const Label = styled.label`
 
 const MInput = styled(SInput)`
   width: 100%;
+  font-family: var(--tt-reg);
+
   /* width: 65.75rem; */
 `
 
@@ -88,6 +93,7 @@ const LInput = styled.textarea`
   /* width: 65.75.rem; */
   width: 100%;
   resize: none;
+  font-family: var(--tt-reg);
 `
 
 // Containers
