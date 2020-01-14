@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const ContactHero = styled.div`
-  height: 62rem;
+  height: 60vh;
   width: 100vw;
   background-size: cover;
   background-position: center;

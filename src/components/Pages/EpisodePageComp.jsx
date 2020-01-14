@@ -9,7 +9,7 @@ import {
 } from "../../styled/S_EpisodePage"
 import { EpisodePageBG } from "../../utils/image-loader"
 import { useSeasons } from "../../CustomHooks/useSeasons"
-import { UpperCased, TestH2, MainHeroTitle } from "../../styled/Titles"
+import { UpperCased, MainHeroTitle } from "../../styled/Titles"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
 import { DifButton } from "../../styled/Buttons"
 

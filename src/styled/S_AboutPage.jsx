@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const AboutPageHero = styled.div`
-  height: 55vh;
+  height: 60vh;
   width: 100vw;
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;

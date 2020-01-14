@@ -6,7 +6,7 @@ import {
   AboveBody,
 } from "../../styled/FooterStyled"
 import SubscriptionContent from "./SubscriptionContent"
-import { MainH2, ResponsiveH2 } from "../../styled/Titles"
+import { MainH2 } from "../../styled/Titles"
 
 const AboveFooterComp = ({ logos }) => {
   return (

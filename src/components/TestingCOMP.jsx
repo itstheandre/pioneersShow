@@ -3,7 +3,7 @@ import React from "react"
 import { imageTest } from "../utils/image-loader"
 import SqEpisodeCard from "./Cards/SqEpisodeCard"
 
-import RcContactCard from "./Cards/RcContactCard"
+// import RcContactCard from "./Cards/RcContactCard"
 
 const TestingGround = ({ allEpisodes }) => {
   // console.log({ allEpisodes })

@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "./Navbar"
+// import Navbar from "./Navbar"
 // import "./layout.css"
 import { Body, ContentWrapper } from "../styled/S_Layout"
 import logos from "../lib/logos"

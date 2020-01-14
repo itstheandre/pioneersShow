@@ -53,12 +53,12 @@ const DesktopNav = styled.nav`
   .navLinks {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 2.5rem;
     list-style-type: none;
     font-size: 2.25rem;
-    width: 50vw;
+    width: 40vw;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -94,7 +94,8 @@ const MobileNavButton = styled.button`
   width: 6vw;
   border: none;
   display: none;
-  visibility: ${({ displayMobile }) => (displayMobile ? "hidden" : "visible")};
+  /* visibility: ${({ displayMobile }) =>
+    displayMobile ? "hidden" : "visible"}; */
 
   &:focus {
     outline: none;

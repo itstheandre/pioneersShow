@@ -87,6 +87,7 @@ const LInput = styled.textarea`
   border: none;
   /* width: 65.75.rem; */
   width: 100%;
+  resize: none;
 `
 
 // Containers

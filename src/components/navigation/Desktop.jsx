@@ -20,7 +20,7 @@ const Desktop = ({ toggle, displayMobile, inView }) => {
         <div className="centerEverything">
           <Link to="/">
             <div className="logo">
-              <img src={logo} />
+              <img src={logo} alt="Pioneers Show Logo" />
             </div>
           </Link>
           <NavLinks inView={inView} />

@@ -4,7 +4,7 @@ const { palette } = allStyles
 
 const HomePageHero = styled.div`
   /* height: 107rem; */
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
