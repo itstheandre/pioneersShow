@@ -10,7 +10,7 @@ export function starterState(allEpisodes) {
 export function episodeReturner(allEpisodes, seasonState) {
   const { selected, showNumber } = seasonState
 
-  console.log({ showNumber })
+  // console.log({ showNumber })
 
   function sortEpisodes() {
     function asc(a, b) {
@@ -33,7 +33,7 @@ export function episodeReturner(allEpisodes, seasonState) {
     .sort(sortEpisodes())
     .slice(0, showNumber)
 
-  console.log("CUSTOM RETURNER", sortedEpisodes)
+  // console.log("CUSTOM RETURNER", sortedEpisodes)
 
   const episodeList = createRcContact(sortedEpisodes)
   const lastThreeCards = createSqContact(allEpisodes)

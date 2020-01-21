@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import HomePageComp from "../components/Pages/HomePageComp"
+import { useLinks } from "../Context/WrapperContext"
 
 export const query = graphql`
   {

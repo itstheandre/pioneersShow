@@ -34,7 +34,7 @@ const StayConnected = styled.h4`
 const AboveParent = styled.div`
   display: flex;
   justify-content: center;
-  margin: 15rem 0;
+  margin: 8vh 0;
   @media screen and (max-width: 768px) {
     margin: 10vh auto;
   }

@@ -23,7 +23,7 @@ const MainHeroTitle = styled.h1`
   color: ${color.white};
   width: 100%;
   text-align: center;
-  font-family: var(--tt-extra);
+  font-family: var(--tt-bold);
 `
 
 const MainH2 = styled.h3`
@@ -37,11 +37,13 @@ const MainH2 = styled.h3`
 `
 
 const TestH2 = styled(MainH2)`
+  /* font-family: var(--t-extra); */
   @media screen and (max-width: 479px) {
     font-size: 4vh;
     line-height: 6vh;
     text-align: left;
   }
+  font-family: var(--tt-bold);
 `
 
 const ResponsiveH2 = styled(MainH2)`

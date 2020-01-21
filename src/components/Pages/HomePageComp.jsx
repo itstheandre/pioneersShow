@@ -16,7 +16,7 @@ const IndexPageComp = ({ allEpisodes }) => {
       <HomePageHero ref={ref} img={HomePageBG}>
         <LayoutWrapper>
           <HomePageHeroText>
-            <HeroH1>Real conversations with  the pioneers of today</HeroH1>
+            <HeroH1>Real conversations with the pioneers of today</HeroH1>
             <Link to="/episodes">
               <Button styleType="primary">Listen to new episode</Button>
             </Link>

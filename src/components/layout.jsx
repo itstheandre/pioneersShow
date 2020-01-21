@@ -11,7 +11,7 @@ import MyNavBar from "./navigation/NavTest"
 // Extra Bold
 // Regular
 
-const Layout = props => {
+const Layout = ({ children }) => {
   // function toggle() {
   //   setDisplayMobile(!displayMobile)
   // }
@@ -22,7 +22,7 @@ const Layout = props => {
       <Body>
         <ContentWrapper>
           <MyNavBar />
-          {props.children}
+          {children}
         </ContentWrapper>
         <BottomArea logos={logos} />
       </Body>

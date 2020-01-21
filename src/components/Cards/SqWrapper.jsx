@@ -21,7 +21,7 @@ const SqWrapper = ({ lastThreeCards }) => {
       <SquareWrapper>{lastThreeCards}</SquareWrapper>
       <IconWrapper>
         <HomeIcon src={LetterImg} alt="Letter" />
-        <MainH2>We'd Love to Hear From You</MainH2>
+        <TestH2>We'd Love to Hear From You</TestH2>
         <HomeBodyText>
           If you have any idea for an episode, want to be a participant in the
           show, or any other general inquiries, fill the form and we’ll try to

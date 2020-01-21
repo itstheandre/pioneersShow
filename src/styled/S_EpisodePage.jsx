@@ -30,7 +30,7 @@ const EpisodeTags = styled.div`
 `
 
 const EpisodeBody = styled.div`
-  margin: 17rem auto;
+  margin: 17rem auto 0.5vh auto;
   width: 100%;
   max-width: 70vw;
 

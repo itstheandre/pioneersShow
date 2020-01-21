@@ -19,9 +19,13 @@ const SquareWrapper = styled.div`
 `
 
 const ContentSection = styled.div`
-  height: 100%;
+  height: auto;
   margin: 5vh auto;
-  width: 15vw;
+  /* padding: 1rem; */
+  width: 15.5vw;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+
   @media screen and (max-width: 1380) {
     width: 45vw;
     margin: 5vh 55vw;
@@ -57,6 +61,7 @@ const ContentOverlay = styled.div`
 
 const ContentBody = styled.div`
   /* min-width: 200px; */
+  padding: 0rem 1rem;
   width: 100%;
   font-size: 1.5rem;
   height: auto;
@@ -69,7 +74,7 @@ const ContentBody = styled.div`
 
 const EpisodeDescription = styled.h4`
   font-size: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 `
 
 const EpisodeTitle = styled.h3`
