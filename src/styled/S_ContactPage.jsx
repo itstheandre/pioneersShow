@@ -47,6 +47,7 @@ const ContactText = styled.p`
 
   @media screen and (max-width: 1100px) {
     margin-top: 5vh;
+    width: 75%;
   }
   /* width: "54rem"; */
   /* font-size: "20rem"; */

@@ -27,4 +27,10 @@ const Button = styled.button`
 const DifButton = styled(Button)`
   margin: 4rem 0;
 `
-export { DifButton, Button }
+
+const SeeAllButton = styled(Button)`
+  @media screen and (max-width: 780px) {
+    width: 35vw;
+  }
+`
+export { DifButton, Button, SeeAllButton }

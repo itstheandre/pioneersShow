@@ -5,7 +5,7 @@ import { HomePageBG } from "../../utils/image-loader"
 import { useSeasons } from "../../CustomHooks/useSeasons"
 import SqWrapper from "../Cards/SqWrapper"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
-import { Button } from "../../styled/Buttons"
+import { Button, SeeAllButton } from "../../styled/Buttons"
 import { Link } from "gatsby"
 
 const IndexPageComp = ({ allEpisodes }) => {
@@ -18,7 +18,9 @@ const IndexPageComp = ({ allEpisodes }) => {
           <HomePageHeroText>
             <HeroH1>Real conversations with the pioneers of today</HeroH1>
             <Link to="/episodes">
-              <Button styleType="primary">Listen to new episode</Button>
+              <SeeAllButton styleType="primary">
+                Listen to new episode
+              </SeeAllButton>
             </Link>
           </HomePageHeroText>
         </LayoutWrapper>

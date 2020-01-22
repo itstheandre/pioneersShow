@@ -12,7 +12,9 @@ const AboutPageHero = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 479px) {
-    height: 65vh;
+    /* height: 75vh; */
+    height: auto;
+    padding-bottom: 5vh;
   }
 `
 
@@ -30,8 +32,9 @@ const AboutContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+  text-align: right;
   /* & p {
     font-size: 2rem;
     line-height: 3rem;
