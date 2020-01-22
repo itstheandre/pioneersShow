@@ -11,16 +11,22 @@ const MenuLinks = [
 
 export function menuLinksFunc(tmpIndex) {
   const style = {
-    // color: "blue",
-    // textDecoration: "underline",
-    // paddingBottom: "1rem",
-    // borderBottom: "2px solid white",
+    color: "#18F4C9",
+    margingBottom: "4rem",
+    borderBottom: "1px solid black",
   }
   return MenuLinks.map((el, index) => (
-    <li key={index}>
-      <Link to={el.to} className="link" tabIndex={tmpIndex} activeStyle={style}>
-        {el.title}
-      </Link>
-    </li>
+    <>
+      <li key={index}>
+        <Link
+          to={el.to}
+          className="link"
+          tabIndex={tmpIndex}
+          activeClassName="active"
+        >
+          {el.title}
+        </Link>
+      </li>
+    </>
   ))
 }

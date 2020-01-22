@@ -3,8 +3,6 @@ import { useInView } from "react-intersection-observer"
 
 export const WrapperContext = createContext()
 const WrapperContextProvider = WrapperContext.Provider
-export const LinkContext = createContext()
-const LinkContextProvider = LinkContext.Provider
 
 export function WrapperProvider({ children }) {
   const [ref, inView] = useInView({
@@ -16,28 +14,9 @@ export function WrapperProvider({ children }) {
 
   return (
     <WrapperContextProvider value={{ ref, inView, count, setCount }}>
-      <LinksProvider>{children}</LinksProvider>
+      <>{children}</>
     </WrapperContextProvider>
   )
-}
-
-export function LinksProvider({ children }) {
-  //
-  const [link, setLink] = useState(null)
-
-  function setTheLink(data) {
-    setLink(data)
-  }
-
-  return (
-    <LinkContextProvider value={{ link, setTheLink }}>
-      {children}
-    </LinkContextProvider>
-  )
-}
-
-export function useLinks() {
-  return useContext(LinkContext)
 }
 
 export function useWrapper() {

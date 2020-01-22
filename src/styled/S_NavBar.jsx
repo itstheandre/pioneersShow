@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import allStyles from "./Theme"
 
-const { navBar } = allStyles
+const { navBar, palette } = allStyles
 
 const DesktopNav = styled.nav`
   position: fixed;
@@ -72,6 +72,21 @@ const DesktopNav = styled.nav`
       align-items: center;
       padding: 0 3rem;
       height: 2.5rem;
+    }
+    .active {
+      color: ${({ inView }) => (inView ? palette.primary : palette.secondary)};
+      /* border-bottom: 1px solid black; */
+      &:after {
+        height: 0.4rem;
+        display: block;
+        width: 100%;
+        background: ${({ inView }) =>
+          inView ? palette.primary : palette.secondary};
+        margin-top: 15px;
+        border-radius: 6px;
+        /* border-right: 1px white; */
+        content: "";
+      }
     }
   }
 
