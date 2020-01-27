@@ -12,6 +12,7 @@ import { Link } from "gatsby"
 const Desktop = ({ toggle, displayMobile, inView }) => {
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
   const menuItem = inView ? menuWhite : menuBlack
+  console.log(displayMobile)
 
   const change = inView ? "true" : "false"
   return (
@@ -24,9 +25,11 @@ const Desktop = ({ toggle, displayMobile, inView }) => {
             </div>
           </Link>
           <NavLinks inView={inView} />
-          <MobileNavButton displayMobile={displayMobile}>
-            <img src={menuItem} alt="mobileNav" onClick={toggle} />
-          </MobileNavButton>
+          {!displayMobile && (
+            <MobileNavButton displayMobile={displayMobile}>
+              <img src={menuItem} alt="mobileNav" onClick={toggle} />
+            </MobileNavButton>
+          )}
         </div>
       </div>
     </DesktopNav>

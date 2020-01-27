@@ -10,10 +10,8 @@ export function WrapperProvider({ children }) {
     rootMargin: "-56px",
   })
 
-  const [count, setCount] = useState(0)
-
   return (
-    <WrapperContextProvider value={{ ref, inView, count, setCount }}>
+    <WrapperContextProvider value={{ ref, inView }}>
       <>{children}</>
     </WrapperContextProvider>
   )

@@ -36,7 +36,7 @@ const HeroH1 = styled.h1`
   color: ${palette.white};
   padding-bottom: 2rem;
   width: 100%;
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 780px) {
     font-size: 5vh;
     line-height: 7.5vh;
   }
