@@ -6,14 +6,14 @@ import {
   AboveBody,
 } from "../../styled/FooterStyled"
 import SubscriptionContent from "./SubscriptionContent"
-import { MainH2 } from "../../styled/Titles"
+import { MainH2, TestH2 } from "../../styled/Titles"
 
 const AboveFooterComp = ({ logos }) => {
   return (
     <>
       <AboveParent>
         <AboveBody>
-          <MainH2>Subscribe for new episodes</MainH2>
+          <TestH2>Subscribe for new episodes</TestH2>
           <LogosWrapper>
             {logos.map(image => {
               return (

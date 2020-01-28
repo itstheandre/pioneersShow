@@ -58,7 +58,7 @@ const DesktopNav = styled.nav`
     height: 2.5rem;
     list-style-type: none;
     font-size: 2.25rem;
-    width: 40vw;
+    width: 28vw;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -70,7 +70,7 @@ const DesktopNav = styled.nav`
     li {
       display: flex;
       align-items: center;
-      padding: 0 3rem;
+      /* padding: 0 3rem; */
       height: 2.5rem;
     }
     .active {

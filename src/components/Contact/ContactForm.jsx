@@ -47,11 +47,11 @@ const ContactForm = () => {
         <input type="hidden" name="form-name" value="contact" />
         <TargetContainer>
           <IndInpCont>
-            <Label htmlFor="name">Name*</Label>
+            <Label htmlFor="name">Name</Label>
             <SInput type="text" placeholder="Your name" id="name" name="name" />
           </IndInpCont>
           <IndInpCont>
-            <Label htmlFor="email">Email*</Label>
+            <Label htmlFor="email">Email</Label>
             <SInput
               type="email"
               placeholder="Your email"

@@ -69,6 +69,7 @@ const SInput = styled.input`
 // Label
 const Label = styled.label`
   font-size: 2rem;
+  font-family: var(--tt-reg);
   padding: 1rem 0;
 `
 

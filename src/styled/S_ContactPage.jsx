@@ -19,7 +19,8 @@ const ContactHero = styled.div`
 const ContactBody = styled.div`
   width: 80vw;
   /* height: 60vh; */
-  margin: 17rem 20.25rem;
+  /* margin: 17rem 20.25rem; */
+  margin: 17rem auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
