@@ -7,36 +7,40 @@ const SquareWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 3vh;
   margin-bottom: 15rem;
 
   @media screen and (max-width: 1100px) {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   @media screen and (max-width: 900px) {
     flex-direction: column;
     margin-bottom: 8vh;
+    align-items: center;
   }
 `
 
 const ContentSection = styled.div`
   height: auto;
-  margin: 5vh auto;
-  /* padding: 1rem; */
   width: 15.5vw;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
 
-  @media screen and (max-width: 1380) {
-    width: 45vw;
-    margin: 5vh 55vw;
-    /* margin-bottom: 5vh; */
-  }
   @media screen and (max-width: 1100px) {
-    /* justify-content: center; */
-    margin: 3vh auto;
+    justify-content: center;
+    width: 22vw;
+    margin-top: 5vh;
+  }
+  @media (max-width: 1000px) {
+    width: 25vw;
+  }
+
+  @media (max-width: 930px) {
+    width: 28vw;
   }
   @media screen and (max-width: 900px) {
     width: 40vw;
+    /* margin-top: 5vh; */
   }
 `
 
