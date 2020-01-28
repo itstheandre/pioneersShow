@@ -16,23 +16,23 @@ const RcContactCard = props => {
 
   return (
     // <G to={`/${slug}`}>
-    <Link to={`/${slug}`}>
-      <EpisodeSection>
-        {/* <IconOverlay img={elipse}> */}
-        <EpisodeImage img={img}>
-          <EpisodeOverlay />
-        </EpisodeImage>
-        {/* </IconOverlay> */}
-        <EpisodeBody>
-          <RqEpisodeDescription>
-            {runtime}m | {publishedDate}
-          </RqEpisodeDescription>
-          <RqEpisodeTitle>
-            #{episodeNumber} - {title}
-          </RqEpisodeTitle>
-        </EpisodeBody>
-      </EpisodeSection>
-    </Link>
+    // <Link to={`/${slug}`}>
+    <EpisodeSection>
+      {/* <IconOverlay img={elipse}> */}
+      <EpisodeImage img={img}>
+        <EpisodeOverlay />
+      </EpisodeImage>
+      {/* </IconOverlay> */}
+      <EpisodeBody>
+        <RqEpisodeDescription>
+          {runtime}m | {publishedDate}
+        </RqEpisodeDescription>
+        <RqEpisodeTitle>
+          #{episodeNumber} - {title}
+        </RqEpisodeTitle>
+      </EpisodeBody>
+    </EpisodeSection>
+    //{/* </Link> */}
   )
 }
 

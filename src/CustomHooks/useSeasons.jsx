@@ -1,4 +1,8 @@
-import { selectedStateChange, seasonDispatch } from "../lib/funcs"
+import {
+  selectedStateChange,
+  seasonDispatch,
+  filterEpisodes,
+} from "../lib/funcs"
 import { createTags } from "../lib/uiCompsDone"
 
 import { useReducer } from "react"
@@ -27,6 +31,12 @@ export function useSeasons(allEpisodes) {
       order,
     })
   }
+  const {
+    episodeList,
+    lastThreeCards,
+    sortedEpisodes,
+    // filteredEpisodes,
+  } = episodeReturner(allEpisodes, seasonState)
 
   function showNumber(number, sortedEpisodes) {
     console.log(seasonState)
@@ -38,12 +48,9 @@ export function useSeasons(allEpisodes) {
     })
   }
 
+  // UI
   const seasonTags = createTags(seasonState, updateSeason)
-
-  const { episodeList, lastThreeCards, sortedEpisodes } = episodeReturner(
-    allEpisodes,
-    seasonState
-  )
+  const filteredEpisodes = filterEpisodes(allEpisodes, seasonState)
 
   return {
     selected,
@@ -54,5 +61,6 @@ export function useSeasons(allEpisodes) {
     updateOrder,
     sortedEpisodes,
     showNumber,
+    filteredEpisodes,
   }
 }

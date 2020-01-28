@@ -61,7 +61,7 @@ const ContentOverlay = styled.div`
 
 const ContentBody = styled.div`
   /* min-width: 200px; */
-  padding: 0rem 1rem;
+  padding: 1.5rem 2rem;
   width: 100%;
   font-size: 1.5rem;
   height: auto;
@@ -74,7 +74,7 @@ const ContentBody = styled.div`
 
 const EpisodeDescription = styled.h4`
   font-size: 1.5rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
 `
 
 const EpisodeTitle = styled.h3`

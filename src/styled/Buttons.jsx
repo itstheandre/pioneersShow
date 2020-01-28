@@ -30,7 +30,7 @@ const DifButton = styled(Button)`
 
 const SeeAllButton = styled(Button)`
   @media screen and (max-width: 780px) {
-    width: 35vw;
+    width: auto;
   }
 `
 export { DifButton, Button, SeeAllButton }

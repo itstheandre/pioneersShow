@@ -19,21 +19,21 @@ const EpisodeCard = ({
 }) => {
   return (
     // <SquareWrapper>
-    <Link to={`/${slug}`}>
-      <ContentSection>
-        <ContentImage img={img}>
-          <ContentOverlay />
-        </ContentImage>
-        <ContentBody>
-          <EpisodeDescription>
-            {runtime}m | {publishedDate}
-          </EpisodeDescription>
-          <EpisodeTitle>
-            #{episodeNumber} - {title}
-          </EpisodeTitle>
-        </ContentBody>
-      </ContentSection>
-    </Link>
+    // <Link to={`/${slug}`}>
+    <ContentSection>
+      <ContentImage img={img}>
+        <ContentOverlay />
+      </ContentImage>
+      <ContentBody>
+        <EpisodeDescription>
+          {runtime}m | {publishedDate}
+        </EpisodeDescription>
+        <EpisodeTitle>
+          #{episodeNumber} - {title}
+        </EpisodeTitle>
+      </ContentBody>
+    </ContentSection>
+    // {/* </Link> */}
     // </SquareWrapper>
   )
 }

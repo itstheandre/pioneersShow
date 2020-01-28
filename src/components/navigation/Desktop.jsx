@@ -12,7 +12,6 @@ import { Link } from "gatsby"
 const Desktop = ({ toggle, displayMobile, inView }) => {
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
   const menuItem = inView ? menuWhite : menuBlack
-  console.log(displayMobile)
 
   const change = inView ? "true" : "false"
   return (

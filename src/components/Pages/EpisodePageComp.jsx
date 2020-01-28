@@ -18,13 +18,11 @@ const EpisodePageComp = ({ allEpisodes }) => {
   const {
     seasonTags,
     episodeList,
-    // updateOrder,
+    filteredEpisodes,
     sortedEpisodes,
     showNumber,
   } = useSeasons(allEpisodes)
-  const lengthCheck = allEpisodes.length - sortedEpisodes.length
-  // console.log(sortedEpisodes.length, "value after render")
-  // console.log(seasonState.showNumber)
+  const lengthCheck = filteredEpisodes.length - sortedEpisodes.length
 
   return (
     <div>
