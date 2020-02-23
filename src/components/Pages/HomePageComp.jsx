@@ -1,11 +1,16 @@
 import React from "react"
 import { useWrapper } from "../../Context/WrapperContext"
-import { HomePageHero, HomePageHeroText, HeroH1 } from "../../styled/S_HomePage"
+import {
+  HomePageHero,
+  HomePageHeroText,
+  HeroH1,
+  PageLayout,
+} from "../../styled/S_HomePage"
 import { HomePageBG } from "../../utils/image-loader"
 import { useSeasons } from "../../CustomHooks/useSeasons"
 import SqWrapper from "../Cards/SqWrapper"
 import { LayoutWrapper } from "../../styled/LayoutWrapper"
-import { Button, SeeAllButton } from "../../styled/Buttons"
+import { SeeAllButton } from "../../styled/Buttons"
 import { Link } from "gatsby"
 
 const IndexPageComp = ({ allEpisodes }) => {

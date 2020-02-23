@@ -2,6 +2,40 @@ import styled from "styled-components"
 import allStyles from "./Theme"
 const { palette } = allStyles
 
+const PageLayout = styled.div`
+  .hero {
+    background-color: ${palette.background};
+    height: ${({ homePage }) => (homePage ? "100vh" : "60vh")};
+    width: 100vw;
+    background-image: url(${({ img }) => img}) no-repeat;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0;
+    margin-bottom: 17rem;
+    font-family: var(--tt-bold);
+    .heroSon {
+      width: 100%;
+      background-color: yellow;
+      display: flex;
+      h1 {
+        font-size: 8rem;
+        line-height: 12rem;
+        font-weight: 800;
+        color: ${palette.white};
+        padding-bottom: 2rem;
+        width: 100%;
+        @media screen and (max-width: 780px) {
+          font-size: 5vh;
+          line-height: 7.5vh;
+        }
+      }
+    }
+  }
+`
+
 const HomePageHero = styled.div`
   /* height: 107rem; */
   height: 100vh;
@@ -11,7 +45,7 @@ const HomePageHero = styled.div`
   background-position: center;
   background-color: #1e3359;
   padding: 0;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   margin-bottom: 17rem;
   font-family: var(--tt-bold);
@@ -62,4 +96,5 @@ export {
   HomeIcon,
   IconWrapper,
   FlexedHomePagePart,
+  PageLayout,
 }
