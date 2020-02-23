@@ -7,17 +7,17 @@ const EpisodeWrapper = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 3rem;
   margin: 3rem 0 16rem;
-  @media screen and (max-width: 904px) {
-    .episode::last-child {
-      display: none;
-    }
-  }
 
   .episode {
     padding-bottom: 150%;
     z-index: -1;
-
     position: relative;
+    @media screen and (max-width: 904px) {
+      &:last-child {
+        /* background-color: red; */
+        display: none;
+      }
+    }
     @media screen and (max-width: 776px) {
       padding-bottom: 80%;
     }
