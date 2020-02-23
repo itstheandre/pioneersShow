@@ -4,7 +4,7 @@ import { imageTest } from "../utils/image-loader"
 // import SqEpisodeCard from "./Cards/SqEpisodeCard"
 import styled from "styled-components"
 import allStyles from "../styled/Theme"
-import TestingEpisodeComp from "./TestingEpisodeComp"
+import SqEpisode from "./Cards/SquareEpisodeCard"
 import { EpisodeWrapper } from "../styled/SqContentCard"
 const { palette } = allStyles
 
@@ -76,7 +76,7 @@ const TestingGround = ({ allEpisodes }) => {
         <div className="bodyWrapper">
           <EpisodeWrapper>
             {arrayToMap.map(el => (
-              <TestingEpisodeComp
+              <SqEpisode
                 img={el.img}
                 title={el.title}
                 episodeNumber={el.episodeNumber}

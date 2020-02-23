@@ -1,8 +1,8 @@
 import React from "react"
-import allStyles from "../styled/Theme"
-import { Episode } from "../styled/SqContentCard"
+import allStyles from "../../styled/Theme"
+import { Episode } from "../../styled/SqContentCard"
 
-const TestingEpisodeComp = props => {
+const SqEpisodeCard = props => {
   const { img, title, episodeNumber, runtime, publishedDate, slug } = props
   return (
     <div className="episode">
@@ -23,4 +23,4 @@ const TestingEpisodeComp = props => {
   )
 }
 
-export default TestingEpisodeComp
+export default SqEpisodeCard
