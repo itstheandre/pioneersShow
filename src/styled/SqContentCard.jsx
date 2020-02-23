@@ -2,96 +2,83 @@ import styled from "styled-components"
 import allStyles from "./Theme"
 const { palette } = allStyles
 
-const SquareWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3vh;
-  margin-bottom: 15rem;
-
-  @media screen and (max-width: 1100px) {
-    justify-content: space-between;
+const EpisodeWrapper = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  /* height: 1000px; */
+  grid-gap: 3rem;
+  margin: 3rem 0 16rem;
+  @media screen and (max-width: 904px) {
+    .episode:last-child {
+      display: none;
+    }
   }
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    margin-bottom: 8vh;
-    align-items: center;
+
+  .episode {
+    /* width: 43rem; */
+    padding-bottom: 150%;
+    position: relative;
+    @media screen and (max-width: 776px) {
+    padding-bottom: 80%
   }
 `
 
-const ContentSection = styled.div`
-  height: auto;
-  width: 15.5vw;
+const Episode = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* background-color: purple; */
+  height: 100%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
 
-  @media screen and (max-width: 1100px) {
-    justify-content: center;
-    width: 22vw;
-    margin-top: 5vh;
+  .image {
+    height: 70%;
+    background: url(${({ img }) => img}) no-repeat;
+    /* background-color: red; */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-size: cover;
+    background-position: center;
+
+    .imageOverlay {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      background-color: ${palette.backgroundTransparent};
+      height: 100%;
+    }
   }
-  @media (max-width: 1000px) {
-    width: 25vw;
+
+  .contentBody {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    height: auto;
+    color: ${palette.secondaryText};
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: yellow; */
+    .description {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: ${palette.black};
+    }
   }
-
-  @media (max-width: 930px) {
-    width: 28vw;
-  }
-  @media screen and (max-width: 900px) {
-    width: 40vw;
-    /* margin-top: 5vh; */
-  }
 `
 
-const ContentImage = styled.div`
-  width: 100%;
-  height: 20vh;
-  background: url(${({ img }) => img}) no-repeat;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-size: cover;
-  background-position: center;
-  @media screen and (max-width: 1100px) {
-  }
-`
-
-const ContentOverlay = styled.div`
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-color: ${palette.backgroundTransparent};
-  height: 100%;
-`
-
-const ContentBody = styled.div`
-  /* min-width: 200px; */
-  padding: 1.5rem 2rem;
-  width: 100%;
-  font-size: 1.5rem;
-  height: auto;
-  color: ${palette.secondaryText};
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-`
-
-const EpisodeDescription = styled.h4`
-  font-size: 1.5rem;
-  padding: 1rem 0;
-`
-
-const EpisodeTitle = styled.h3`
-  font-size: 2rem;
-  color: ${palette.black};
-`
-
-export {
-  SquareWrapper,
-  ContentSection,
-  ContentImage,
-  ContentOverlay,
-  ContentBody,
-  EpisodeTitle,
-  EpisodeDescription,
-}
+// export // SquareWrapper,
+// ContentSection,
+// ContentImage,
+// ContentOverlay,
+// ContentBody,
+// EpisodeTitle,
+// EpisodeDescription,
+export { EpisodeWrapper, Episode }

@@ -4,6 +4,7 @@ import allStyles from "./Theme"
 const { navBar } = allStyles
 
 const NavBarStyled = styled.nav`
+  z-index: 10000;
   position: fixed;
   top: 0%;
   width: 100vw;

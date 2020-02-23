@@ -1,5 +1,5 @@
 import React from "react"
-import { SquareWrapper } from "../../styled/SqContentCard"
+import { EpisodeWrapper } from "../../styled/SqContentCard"
 import { MainH2, HomeBodyText, TestH2 } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
 import {
@@ -13,12 +13,12 @@ const SqWrapper = ({ lastThreeCards }) => {
   return (
     <>
       <FlexedHomePagePart>
-        <TestH2>Latest Episodes </TestH2>
+        <TestH2>Latest Episodes</TestH2>
         <Link to="/episodes">
           <Button styleType="secondary">See all</Button>
         </Link>
       </FlexedHomePagePart>
-      <SquareWrapper>{lastThreeCards}</SquareWrapper>
+      <EpisodeWrapper>{lastThreeCards}</EpisodeWrapper>
       <IconWrapper>
         <HomeIcon src={LetterImg} alt="Letter" />
         <TestH2>We'd Love to Hear From You</TestH2>

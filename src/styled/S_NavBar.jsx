@@ -4,6 +4,7 @@ import allStyles from "./Theme"
 const { navBar, palette } = allStyles
 
 const DesktopNav = styled.nav`
+  z-index: 1000;
   position: fixed;
   height: 12rem;
   width: 100vw;

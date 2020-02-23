@@ -1,7 +1,8 @@
 import React from "react"
 import Tags from "../styled/Tags"
 import RcContactCard from "../components/Cards/RcContactCard"
-import SqEpisodeCard from "../components/Cards/SqEpisodeCard"
+import { Episode } from "../styled/SqContentCard"
+import TestingEpisodeComp from "../components/TestingEpisodeComp"
 
 export function createTags({ allSeasons }, updateSeason) {
   return allSeasons.map(el => {
@@ -44,7 +45,7 @@ export function createSqContact(allEpisodes) {
     const slug = el.slug.current
 
     return (
-      <SqEpisodeCard
+      <TestingEpisodeComp
         img={img}
         title={title}
         runtime={runtime}
