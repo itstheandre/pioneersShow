@@ -20,29 +20,6 @@ const LayoutTest = styled.div`
   }
 `
 
-// const EpisodeWrapper = styled.section`
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-//   /* height: 1000px; */
-//   grid-gap: 3rem;
-//   background-color: green;
-//   @media screen and (max-width: 904px) {
-//     background: yellow;
-//     .episode:last-child {
-//       display: none;
-//     }
-//   }
-
-//   .episode {
-//     /* width: 43rem; */
-//     padding-bottom: 100%;
-//     position: relative;
-//     /* background-color: yellow; */
-//   }
-// `
-
-/* background: url(${({ img }) => img}) no-repeat; */
-
 const arrayToMap = [
   {
     img: imageTest,
@@ -85,52 +62,9 @@ const TestingGround = ({ allEpisodes }) => {
               />
             ))}
           </EpisodeWrapper>
-          {/* <EpisodeWrapper>
-            <div className="episode">
-              <Episode>
-                <div className="image">
-                  <div className="imageOverlay" />
-                </div>
-                <div className="contentBody">
-                  <div className="description"></div>
-                  <div className="title"></div>
-                </div>
-              </Episode>
-            </div>
-            <div className="episode">
-              <Episode>
-                <div className="image">
-                  <div className="imageOverlay" />
-                </div>
-                <div className="contentBody">
-                  <div className="description"></div>
-                  <div className="title"></div>
-                </div>
-              </Episode>
-            </div>
-            <div className="episode">
-              <Episode>
-                <div className="image">
-                  <div className="imageOverlay" />
-                </div>
-                <div className="contentBody">
-                  <div className="description"></div>
-                  <div className="title"></div>
-                </div>
-              </Episode>
-            </div>
-          </EpisodeWrapper> */}
+
           <div style={{ height: "100rem", backgroundColor: "red" }}>Hi</div>
-          <div style={{ width: "200px" }}>
-            {/* <SqEpisodeCard
-              img={imageTest}
-              title="Season 1"
-              episodeNumber="00"
-              runtime="65m"
-              publishedDate="Yesterday"
-            /> */}
-          </div>
-          {/* <RcContactCard img={imageTest} title="Season 2" /> */}
+          <div style={{ width: "200px" }}></div>
 
           <div style={{ height: "100rem", backgroundColor: "red" }}>Hi</div>
           <div style={{ height: "100rem", backgroundColor: "blue" }}>Hi</div>

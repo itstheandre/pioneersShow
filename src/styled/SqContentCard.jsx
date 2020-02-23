@@ -5,24 +5,24 @@ const { palette } = allStyles
 const EpisodeWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  /* height: 1000px; */
   grid-gap: 3rem;
   margin: 3rem 0 16rem;
   @media screen and (max-width: 904px) {
-    .episode:last-child {
+    .episode::last-child {
       display: none;
     }
   }
 
   .episode {
-    /* width: 43rem; */
     padding-bottom: 150%;
+    z-index: -1;
+
     position: relative;
     @media screen and (max-width: 776px) {
-    padding-bottom: 80%
+      padding-bottom: 80%;
+    }
   }
 `
-
 const Episode = styled.div`
   position: absolute;
   top: 0;
@@ -74,11 +74,4 @@ const Episode = styled.div`
   }
 `
 
-// export // SquareWrapper,
-// ContentSection,
-// ContentImage,
-// ContentOverlay,
-// ContentBody,
-// EpisodeTitle,
-// EpisodeDescription,
 export { EpisodeWrapper, Episode }

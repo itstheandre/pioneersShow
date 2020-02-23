@@ -6,6 +6,7 @@ const NavLinks = ({ isMobileLink }) => {
   if (isMobileLink) {
     tmpIndex = -1
   }
+
   const navLi = menuLinksFunc(tmpIndex)
 
   return <ul className="navLinks">{navLi}</ul>

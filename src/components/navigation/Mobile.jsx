@@ -1,5 +1,6 @@
 import React from "react"
 import NavLinks from "./NavLinks"
+import MobileNavLinks from "./MobileNavLinks"
 import styled from "styled-components"
 import { pioneersWhiteLogo, closeX } from "../../utils/image-loader"
 
@@ -13,21 +14,25 @@ const MyMobileNav = styled.nav`
   transform: translateX(
     ${({ displayMobile }) => (displayMobile ? "0%" : "100%")}
   );
+  display: flex;
+  align-items: center;
 
   .navLinks {
+    margin: 0 5.25rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     height: 60vh;
     list-style-type: none;
   }
 
   .link {
     color: white;
-    font-size: 2.5vh;
+    font-size: 5rem;
     text-decoration: none;
     list-style-type: none;
+    font-weight: 800;
   }
   .nav {
     height: 12rem;
@@ -49,13 +54,6 @@ const MyMobileNav = styled.nav`
     color: white;
     padding: 0 5rem;
     margin: 0 auto;
-    /* @media screen and (max-width: 479px) {
-      padding: 0 1vw;
-    } */
-  }
-
-  .test {
-    margin-top: 15vh;
   }
 
   .logo {
@@ -69,62 +67,6 @@ const MyMobileNav = styled.nav`
   }
 `
 
-// const DesktopReset = styled.nav`
-//   display: flex;
-//   flex-flow: row nowrap;
-//   justify-content: space-between;
-//   align-items: center;
-//   color: white;
-//   height: 15vh;
-//   padding: 0 3rem;
-
-//   .logo {
-//     visibility: hidden;
-//     /* img {
-//       height: 100%;
-//     } */
-//   }
-// `
-
-const Mobile = ({ displayMobile, toggle }) => {
-  return (
-    <MyMobileNav displayMobile={displayMobile}>
-      <div className="nav">
-        <div className="navWrapper">
-          <div className="logo">
-            <img src={pioneersWhiteLogo} alt="blank" />
-          </div>
-          <MyXButton>
-            <img src={closeX} alt="X" onClick={toggle} />
-          </MyXButton>
-        </div>
-      </div>
-      <div className="test">
-        <NavLinks isMobileLink={!displayMobile} />
-      </div>
-    </MyMobileNav>
-  )
-}
-
-export default Mobile
-
-// const DesktopReset = styled.nav`
-//   display: flex;
-//   flex-flow: row nowrap;
-//   justify-content: space-between;
-//   align-items: center;
-//   color: white;
-//   height: 15vh;
-//   padding: 0 3rem;
-
-//   .logo {
-//     visibility: hidden;
-//     /* img {
-//       height: 100%;
-//     } */
-//   }
-// `
-
 const MyXButton = styled.button`
   background: transparent;
   height: 100%;
@@ -136,3 +78,27 @@ const MyXButton = styled.button`
     display: block;
   }
 `
+
+const Mobile = ({ displayMobile, toggle }) => {
+  return (
+    <MyMobileNav displayMobile={displayMobile}>
+      <div className="nav">
+        <div className="navWrapper">
+          <div className="logo">
+            <img src={pioneersWhiteLogo} alt="blank" />
+          </div>
+          <MyXButton onClick={toggle}>
+            <img src={closeX} alt="X" />
+          </MyXButton>
+        </div>
+      </div>
+      <div className="linksWrapper">
+        {/* <div className="test"> */}
+        <MobileNavLinks isMobileLink={!displayMobile} />
+      </div>
+      {/* </div> */}
+    </MyMobileNav>
+  )
+}
+
+export default Mobile

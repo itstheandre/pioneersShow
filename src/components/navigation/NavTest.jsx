@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react"
-// import { pioneersColorLogo, pioneersWhiteLogo } from "../../utils/image-loader"
-// import { Link } from "gatsby"
-// import { useWrapper } from "../../Context/WrapperContext"
+
 import Desktop from "./Desktop"
 import Mobile from "./Mobile"
 import styled from "styled-components"
