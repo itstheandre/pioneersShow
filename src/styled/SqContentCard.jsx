@@ -21,6 +21,12 @@ const EpisodeWrapper = styled.section`
     @media screen and (max-width: 776px) {
       padding-bottom: 80%;
     }
+    @media screen and (max-width: 390px) {
+      padding-bottom: 120%;
+    }
+    @media screen and (max-width: 330px) {
+      padding-bottom: 150%;
+    }
   }
 `
 const Episode = styled.div`

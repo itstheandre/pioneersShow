@@ -45,7 +45,7 @@ const HomePageHero = styled.div`
   background-position: center;
   background-color: #1e3359;
   padding: 0;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   margin-bottom: 17rem;
   font-family: var(--tt-bold);
