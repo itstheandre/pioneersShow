@@ -34,5 +34,5 @@ export function episodeReturner(allEpisodes, seasonState) {
   const episodeList = createRcContact(sortedEpisodes)
   const lastThreeCards = createSqContact(allEpisodes)
 
-  return { episodeList, lastThreeCards, sortedEpisodes }
+  return { episodeList, lastThreeCards, sortedEpisodes, allEpisodes }
 }

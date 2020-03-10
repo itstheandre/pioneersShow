@@ -1,5 +1,5 @@
 import React from "react"
-import { EpisodeWrapper } from "../../styled/SqContentCard"
+import { EpisodeWrapper, EpisodeWrap } from "../../styled/SqContentCard"
 import { MainH2, HomeBodyText, TestH2 } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
 import {
@@ -9,7 +9,8 @@ import {
 } from "../../styled/S_HomePage"
 import { Button } from "../../styled/Buttons"
 import { Link } from "gatsby"
-const SqWrapper = ({ lastThreeCards }) => {
+import SqEpisodeCard from "./SquareEpisodeCard"
+const SqWrapper = ({ lastThreeEpisodes }) => {
   return (
     <>
       <FlexedHomePagePart>
@@ -18,7 +19,12 @@ const SqWrapper = ({ lastThreeCards }) => {
           <Button styleType="secondary">See all</Button>
         </Link>
       </FlexedHomePagePart>
-      <EpisodeWrapper>{lastThreeCards}</EpisodeWrapper>
+      <EpisodeWrap>
+        {lastThreeEpisodes.map(el => (
+          <SqEpisodeCard episodeInfo={el} />
+        ))}
+      </EpisodeWrap>
+      {/* <EpisodeWrapper>{lastThreeCards}</EpisodeWrapper> */}
       <IconWrapper>
         <HomeIcon src={LetterImg} alt="Letter" />
         <TestH2>We'd Love to Hear From You</TestH2>

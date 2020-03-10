@@ -1,25 +1,43 @@
 import React from "react"
 import allStyles from "../../styled/Theme"
 import { Episode } from "../../styled/SqContentCard"
+import styled from "styled-components"
+import BgImg from "gatsby-background-image"
 
-const SqEpisodeCard = props => {
-  const { img, title, episodeNumber, runtime, publishedDate, slug } = props
+const { palette } = allStyles
+
+//debugging - https://jsfiddle.net/3z117Lpm/1/
+
+const SqEpisodeCard = ({ episodeInfo }) => {
+  console.log(episodeInfo)
+  const {
+    img,
+    title,
+    episodeNumber,
+    runtime,
+    publishedDate,
+    slug,
+    fluid,
+  } = episodeInfo
   return (
-    <div className="episode">
-      <Episode img={img}>
-        <div className="image">
-          <div className="imageOverlay" />
+    <figure className="item">
+      <BgImg
+        fluid={fluid}
+        Tag="div"
+        className="image"
+        backgroundColor={palette.backgroundTransparent}
+      >
+        <div className="imageOverlay" />
+      </BgImg>
+      <figcaption>
+        <div className="description">
+          {runtime}m | {publishedDate}
         </div>
-        <div className="contentBody">
-          <div className="description">
-            {runtime}m | {publishedDate}
-          </div>
-          <div className="title">
-            #{episodeNumber} - {title}
-          </div>
+        <div className="title">
+          #{episodeNumber} - {title}
         </div>
-      </Episode>
-    </div>
+      </figcaption>
+    </figure>
   )
 }
 
