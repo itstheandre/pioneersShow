@@ -1,5 +1,5 @@
 import { selectedEverything, filterEpisodes } from "./funcs"
-import { createRcContact, createSqContact } from "./uiCompsDone"
+import { createRcContact } from "./uiCompsDone"
 
 export function starterState(allEpisodes) {
   const allSeasons = selectedEverything(allEpisodes)
@@ -32,7 +32,6 @@ export function episodeReturner(allEpisodes, seasonState) {
     .slice(0, showNumber)
 
   const episodeList = createRcContact(sortedEpisodes)
-  const lastThreeCards = createSqContact(allEpisodes)
 
-  return { episodeList, lastThreeCards, sortedEpisodes, allEpisodes }
+  return { episodeList, sortedEpisodes, allEpisodes }
 }

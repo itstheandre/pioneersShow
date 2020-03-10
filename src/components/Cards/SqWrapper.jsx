@@ -1,5 +1,5 @@
 import React from "react"
-import { EpisodeWrapper, EpisodeWrap } from "../../styled/SqContentCard"
+import { EpisodeWrap } from "../../styled/SqContentCard"
 import { MainH2, HomeBodyText, TestH2 } from "../../styled/Titles"
 import { LetterImg } from "../../utils/image-loader"
 import {
@@ -24,7 +24,6 @@ const SqWrapper = ({ lastThreeEpisodes }) => {
           <SqEpisodeCard episodeInfo={el} />
         ))}
       </EpisodeWrap>
-      {/* <EpisodeWrapper>{lastThreeCards}</EpisodeWrapper> */}
       <IconWrapper>
         <HomeIcon src={LetterImg} alt="Letter" />
         <TestH2>We'd Love to Hear From You</TestH2>

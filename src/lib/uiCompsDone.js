@@ -37,23 +37,3 @@ export function createRcContact(sortedEpisodes) {
     )
   })
 }
-
-export function createSqContact(allEpisodes) {
-  return allEpisodes.slice(0, 3).map(el => {
-    const img = el.mainImage.asset.fluid.src
-    const { title, runtime, publishedDate, id, episodeNumber } = el
-    const slug = el.slug.current
-
-    return (
-      <SqEpisode
-        img={img}
-        title={title}
-        runtime={runtime}
-        publishedDate={publishedDate}
-        key={id}
-        episodeNumber={episodeNumber}
-        slug={slug}
-      />
-    )
-  })
-}

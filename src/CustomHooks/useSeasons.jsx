@@ -33,7 +33,7 @@ export function useSeasons(allEpisodes) {
   }
   const {
     episodeList,
-    lastThreeCards,
+    // lastThreeCards,
     sortedEpisodes,
     // allEpisodes,
     // filteredEpisodes,
@@ -70,7 +70,7 @@ export function useSeasons(allEpisodes) {
     selected,
     seasonTags,
     episodeList,
-    lastThreeCards,
+    // lastThreeCards,
     seasonState,
     updateOrder,
     sortedEpisodes,

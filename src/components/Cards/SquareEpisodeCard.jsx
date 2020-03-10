@@ -1,6 +1,5 @@
 import React from "react"
 import allStyles from "../../styled/Theme"
-import { Episode } from "../../styled/SqContentCard"
 import styled from "styled-components"
 import BgImg from "gatsby-background-image"
 

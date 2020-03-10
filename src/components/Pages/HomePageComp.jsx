@@ -15,7 +15,7 @@ import { Link } from "gatsby"
 
 const IndexPageComp = ({ allEpisodes }) => {
   const { ref } = useWrapper()
-  const { lastThreeCards, lastThreeEpisodes } = useSeasons(allEpisodes)
+  const { lastThreeEpisodes } = useSeasons(allEpisodes)
   console.log({ lastThreeEpisodes })
   return (
     <>
@@ -32,10 +32,7 @@ const IndexPageComp = ({ allEpisodes }) => {
         </LayoutWrapper>
       </HomePageHero>
       <LayoutWrapper>
-        <SqWrapper
-          // lastThreeCards={lastThreeCards}
-          lastThreeEpisodes={lastThreeEpisodes}
-        />
+        <SqWrapper lastThreeEpisodes={lastThreeEpisodes} />
       </LayoutWrapper>
     </>
   )
