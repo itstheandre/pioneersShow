@@ -60,7 +60,17 @@ export function useSeasons(allEpisodes) {
       publishedDate: el.publishedDate,
       slug: el.slug.current,
       runtime: el.runtime,
-      img: el.mainImage.asset.fluid.src,
+      fluid: el.mainImage.asset.fluid,
+    }
+  })
+
+  const sorted = sortedEpisodes.map(el => {
+    return {
+      title: el.title,
+      episodeNumber: el.episodeNumber,
+      publishedDate: el.publishedDate,
+      slug: el.slug.current,
+      runtime: el.runtime,
       fluid: el.mainImage.asset.fluid,
     }
   })
@@ -69,7 +79,8 @@ export function useSeasons(allEpisodes) {
   return {
     selected,
     seasonTags,
-    episodeList,
+    // episodeList,
+    sorted,
     // lastThreeCards,
     seasonState,
     updateOrder,

@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const LayoutWrapper = styled.div`
   margin: 0 auto;
-  width: 1080px;
-  max-width: 825px;
+  /* width: 1080px; */
+  max-width: 1080px;
   display: flex;
   flex-direction: column;
   align-items: column;

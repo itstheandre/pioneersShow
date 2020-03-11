@@ -2,6 +2,56 @@ import styled from "styled-components"
 import allStyles from "./Theme"
 const { palette } = allStyles
 
+const ReqEpisode = styled.article`
+  width: 100%;
+  height: 9rem;
+  margin: 3rem 0 3rem 0;
+  display: flex;
+
+  .image {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    .overlay {
+      border-radius: 6px;
+      background-color: ${palette.backgroundTransparent};
+      height: 100%;
+      width: 9rem;
+    }
+  }
+
+  .body {
+    color: ${palette.secondaryText};
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 2rem;
+
+    .description {
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: ${palette.black};
+    }
+  }
+`
+
+// const RqEpisodeDescription = styled.h4`
+//   font-size: 1.5rem;
+//   padding-bottom: 1rem;
+// `
+
+// const RqEpisodeTitle = styled.h3`
+//   font-size: 2rem;
+//   color: ${palette.black};
+// `
+
 const EpisodeWrap = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -68,4 +118,4 @@ const EpisodeWrap = styled.section`
   }
 `
 
-export { EpisodeWrap }
+export { EpisodeWrap, ReqEpisode }

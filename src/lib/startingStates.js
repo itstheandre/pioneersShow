@@ -31,7 +31,7 @@ export function episodeReturner(allEpisodes, seasonState) {
     .sort(sortEpisodes())
     .slice(0, showNumber)
 
-  const episodeList = createRcContact(sortedEpisodes)
+  // const episodeList = createRcContact(sortedEpisodes)
 
-  return { episodeList, sortedEpisodes, allEpisodes }
+  return { sortedEpisodes, allEpisodes }
 }

@@ -24,8 +24,9 @@ const Layout = ({ children }) => {
       <Meta />
       <Body>
         <ContentWrapper>
+          {children}
+          {/* <LayoutWrapper>{children}</LayoutWrapper> */}
           <MyNavBar />
-          <LayoutWrapper>{children}</LayoutWrapper>
         </ContentWrapper>
         <BottomArea logos={logos} />
       </Body>

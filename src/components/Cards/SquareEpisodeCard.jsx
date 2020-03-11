@@ -1,8 +1,8 @@
 import React from "react"
-import allStyles from "../../styled/Theme"
 import styled from "styled-components"
 import BgImg from "gatsby-background-image"
 
+import allStyles from "../../styled/Theme"
 const { palette } = allStyles
 
 //debugging - https://jsfiddle.net/3z117Lpm/1/
@@ -10,7 +10,6 @@ const { palette } = allStyles
 const SqEpisodeCard = ({ episodeInfo }) => {
   console.log(episodeInfo)
   const {
-    img,
     title,
     episodeNumber,
     runtime,

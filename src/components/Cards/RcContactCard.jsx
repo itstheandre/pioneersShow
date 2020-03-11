@@ -1,38 +1,39 @@
 import React from "react"
-import {
-  EpisodeSection,
-  EpisodeOverlay,
-  EpisodeImage,
-  EpisodeBody,
-  RqEpisodeDescription,
-  RqEpisodeTitle,
-  // IconOverlay,
-} from "../../styled/RecContactCard"
-
+import BgImg from "gatsby-background-image"
 import { Link } from "gatsby"
+import { ReqEpisode } from "../../styled/ContentCard"
+import allStyles from "../../styled/Theme"
+const { palette } = allStyles
 
-const RcContactCard = props => {
-  const { img, title, runtime, episodeNumber, publishedDate, slug } = props
+const RcContactCard = ({ episodeInfo }) => {
+  const {
+    title,
+    runtime,
+    episodeNumber,
+    publishedDate,
+    slug,
+    fluid,
+  } = episodeInfo
 
   return (
-    // <G to={`/${slug}`}>
-    // <Link to={`/${slug}`}>
-    <EpisodeSection>
-      {/* <IconOverlay img={elipse}> */}
-      <EpisodeImage img={img}>
-        <EpisodeOverlay />
-      </EpisodeImage>
-      {/* </IconOverlay> */}
-      <EpisodeBody>
-        <RqEpisodeDescription>
+    <ReqEpisode>
+      <BgImg
+        fluid={fluid}
+        Tag="div"
+        className="image"
+        backgroundColor={palette.backgroundTransparent}
+      >
+        <div className="overlay" />
+      </BgImg>
+      <div className="body">
+        <div className="description">
           {runtime}m | {publishedDate}
-        </RqEpisodeDescription>
-        <RqEpisodeTitle>
+        </div>
+        <div className="title">
           #{episodeNumber} - {title}
-        </RqEpisodeTitle>
-      </EpisodeBody>
-    </EpisodeSection>
-    //{/* </Link> */}
+        </div>
+      </div>
+    </ReqEpisode>
   )
 }
 
