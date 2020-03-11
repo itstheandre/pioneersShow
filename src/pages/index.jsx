@@ -48,33 +48,34 @@ const IndexPage = ({ data }) => {
             </LayoutWrapper>
           </BgImg>
         </div>
-
-        <div className="flexed">
-          <h2>Latest Episodes</h2>
-          <Link to="/episodes">
-            <Button styleType="secondary">See all</Button>
-          </Link>
-        </div>
-        <EpisodeWrap>
-          {lastThreeEpisodes.map(el => (
-            <SqEpisodeCard episodeInfo={el} />
-          ))}
-        </EpisodeWrap>
-        <div className="iconWrapper">
-          {/* <BgImg
-            fluid={homePage.letterIcon.asset.fluid}
-            Tag="div"
-            className="icon"
-          /> */}
-          <Img fluid={homePage.letterIcon.asset.fluid} />
-          <img src={homePage.letterIcon.asset.fluid.src} />
-          <h2>We'd Love to Hear From You</h2>
-          <div className="homeBody">
-            If you have any idea for an episode, want to be a participant in the
-            show, or any other general inquiries, fill the form and we’ll try to
-            get back to you.
+        <LayoutWrapper>
+          <div className="flexed">
+            <h2>Latest Episodes</h2>
+            <Link to="/episodes">
+              <Button styleType="secondary">See all</Button>
+            </Link>
           </div>
-        </div>
+          <EpisodeWrap>
+            {lastThreeEpisodes.map(el => (
+              <SqEpisodeCard episodeInfo={el} />
+            ))}
+          </EpisodeWrap>
+          <div className="iconWrapper">
+            {/* <BgImg
+          fluid={homePage.letterIcon.asset.fluid}
+          Tag="div"
+          className="icon"
+        /> */}
+            <Img fluid={homePage.letterIcon.asset.fluid} />
+            <img src={homePage.letterIcon.asset.fluid.src} />
+            <h2>We'd Love to Hear From You</h2>
+            <div className="homeBody">
+              If you have any idea for an episode, want to be a participant in
+              the show, or any other general inquiries, fill the form and we’ll
+              try to get back to you.
+            </div>
+          </div>
+        </LayoutWrapper>
       </PageLayout>
 
       {/* <HomePageComp allEpisodes={allEpisodes} /> */}
