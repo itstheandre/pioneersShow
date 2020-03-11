@@ -1,8 +1,6 @@
 import React from "react"
 import Tags from "../styled/Tags"
 import RcContactCard from "../components/Cards/RcContactCard"
-import { Episode } from "../styled/SqContentCard"
-import SqEpisode from "../components/Cards/SquareEpisodeCard"
 
 export function createTags({ allSeasons }, updateSeason) {
   return allSeasons.map(el => {

@@ -6,7 +6,7 @@ import {
   HomeIcon,
   IconWrapper,
   FlexedHomePagePart,
-} from "../../styled/S_HomePage"
+} from "../../styled/PageLayout"
 import { Button } from "../../styled/Buttons"
 import { Link } from "gatsby"
 import SqEpisodeCard from "./SquareEpisodeCard"

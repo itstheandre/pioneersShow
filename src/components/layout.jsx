@@ -6,6 +6,8 @@ import logos from "../lib/logos"
 import BottomArea from "./Footer/BottomArea"
 import GlobalStyle from "../styled/GlobalStyle"
 import MyNavBar from "./navigation/NavTest"
+import { LayoutWrapper } from "../styled/LayoutWrapper"
+import Meta from "./Meta"
 
 // Bold
 // Extra Bold
@@ -19,10 +21,11 @@ const Layout = ({ children }) => {
   return (
     <div className="app">
       <GlobalStyle />
+      <Meta />
       <Body>
         <ContentWrapper>
           <MyNavBar />
-          {children}
+          <LayoutWrapper>{children}</LayoutWrapper>
         </ContentWrapper>
         <BottomArea logos={logos} />
       </Body>
