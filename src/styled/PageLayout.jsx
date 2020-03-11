@@ -19,7 +19,6 @@ const PageLayout = styled.div`
     width: 100vw;
     background-size: cover;
     background-position: center;
-    /* background-color: #1e3359; */
     left: 50%;
     right: 50%;
     margin-left: -50vw;
@@ -27,8 +26,19 @@ const PageLayout = styled.div`
     padding: 0;
     display: flex;
     align-items: center;
+    flex-direction: ${({ homePage }) => (!homePage ? "column" : "")};
+    justify-content: ${({ homePage }) => (!homePage ? "center" : "")};
     font-family: var(--tt-bold);
     margin-bottom: 17rem;
+
+    @media (max-width: 479px) {
+      height: ${({ aboutPage }) => {
+        if (aboutPage) return "auto"
+      }};
+      padding-bottom: ${({ aboutPage }) => {
+        if (aboutPage) return "5vh"
+      }};
+    }
 
     .heroText {
       h1 {
@@ -43,6 +53,28 @@ const PageLayout = styled.div`
           line-height: 7.5vh;
         }
       }
+    }
+
+    .upperCased {
+      font-size: ${h4.fontSize};
+      color: ${color.white};
+      letter-spacing: ${h4.letterSpacing};
+      /* font-weight: ${h4.fontWeight}; */
+      text-transform: uppercase;
+      margin: ${h4.margin};
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        margin-top: 10vh;
+      }
+    }
+
+    .secondaryHeader {
+      font-size: ${h2.fontSize};
+  line-height: ${h2.lineHeight};
+  color: ${color.white};
+  width: 100%;
+  text-align: center;
+  font-family: var(--tt-bold);
     }
   }
   h2 {
@@ -85,6 +117,33 @@ const PageLayout = styled.div`
     width: 65%;
     text-align: center;
     margin: 2rem 0;
+  }
+
+  .aboutBody {
+    width: 100%;
+  margin: 17rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: right; 
+
+  p {
+    font-size: 2rem;
+  line-height: 3rem;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: justify;
+  font-family: var(--lora);
+  }
+  } 
   }
 `
 
