@@ -74,7 +74,8 @@ const EpisodeWrap = styled.section`
     width: 100%;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     z-index: -1;
-
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     @media screen and (max-width: 904px) {
       &:last-child {
         /* background-color: red; */
@@ -91,6 +92,10 @@ const EpisodeWrap = styled.section`
       border-top-right-radius: 6px;
       background-size: cover;
       background-position: center;
+      ::before {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
 
       .imageOverlay {
         border-top-left-radius: 6px;
