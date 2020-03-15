@@ -10,13 +10,13 @@ const MenuLinks = [
 
 export function mobileNavs(tmpIndex) {
   return MenuLinks.map((el, index) => (
-    <>
-      <li key={index}>
-        <Link to={el.to} className="link" tabIndex={tmpIndex}>
-          {el.title}
-        </Link>
-      </li>
-    </>
+    // <>
+    <li key={index}>
+      <Link to={el.to} className="link" tabIndex={tmpIndex} key={index}>
+        {el.title}
+      </Link>
+    </li>
+    // </>
   ))
 }
 
@@ -29,17 +29,18 @@ export function menuLinksFunc(tmpIndex) {
 
   // console.log({ tmpIndex })
   return MenuLinks.filter((el, i) => i > 0).map((el, i) => (
-    <>
-      <li key={i}>
-        <Link
-          to={el.to}
-          className="link"
-          tabIndex={tmpIndex}
-          activeClassName="active"
-        >
-          {el.title}
-        </Link>
-      </li>
-    </>
+    // <>
+    <li key={i}>
+      <Link
+        to={el.to}
+        className="link"
+        tabIndex={tmpIndex}
+        activeClassName="active"
+        key={i}
+      >
+        {el.title}
+      </Link>
+    </li>
+    // </>
   ))
 }

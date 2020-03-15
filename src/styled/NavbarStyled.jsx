@@ -17,7 +17,10 @@ const NavBarStyled = styled.nav`
   ${({ change }) =>
     change &&
     css`
-      background-color: ${({ change }) => navBar.background[change]};
+      background-color: ${({ change }) => {
+        console.log({ change })
+        return navBar.background[change]
+      }};
       box-shadow: ${({ change }) => navBar.shadow[change]};
     `}
 `

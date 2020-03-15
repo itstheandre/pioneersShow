@@ -21,8 +21,16 @@ const DesktopNav = styled.nav`
     color: white;
     padding: 0 5rem;
     margin: 0 auto;
-    background-color: ${({ change }) => navBar.background[change]};
-    box-shadow: ${({ change }) => navBar.shadow[change]};
+    background-color: ${({ change, starting }) => {
+      /* console.log({ change }) */
+      console.log("Styled stuff", { starting })
+      if (starting) return "rgba(0,0,0,0)"
+      if (change) return navBar.background[change]
+    }};
+    box-shadow: ${({ change, starting }) => {
+      if (starting) return navBar.shadow["false"]
+      if (change) return navBar.shadow[change]
+    }};
   }
 
   .centerEverything {

@@ -10,7 +10,6 @@ import { LayoutWrapper } from "../styled/LayoutWrapper"
 const AboutPage = ({ data }) => {
   const [{ node: aboutPage }] = data.allSanityPage.edges
   const { ref } = useWrapper()
-  console.log(aboutPage)
   return (
     <Layout>
       <Meta title={`Pioneers Show ${aboutPage.title}`} />

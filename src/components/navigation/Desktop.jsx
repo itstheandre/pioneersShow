@@ -9,13 +9,14 @@ import {
 import NavLinks from "./NavLinks"
 import { Link } from "gatsby"
 
-const Desktop = ({ toggle, displayMobile, inView }) => {
+const Desktop = ({ toggle, displayMobile, inView, starting }) => {
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
   const menuItem = inView ? menuWhite : menuBlack
 
   const change = inView ? "true" : "false"
+  // const start = starting ? "tr
   return (
-    <DesktopNav inView={inView} change={change}>
+    <DesktopNav inView={inView} change={change} starting={starting}>
       <div className="navWrapper">
         <div className="centerEverything">
           <Link to="/">

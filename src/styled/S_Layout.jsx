@@ -25,7 +25,10 @@ const NavBarStyled = styled.nav`
   padding: 0 3rem;
   margin: 0 auto;
   box-shadow: ${({ change }) => navBar.shadow[change]};
-  background-color: ${({ change }) => navBar.background[change]};
+  background-color: ${({ change }) => {
+    console.log({ change })
+    return navBar.background[change]
+  }};
 `
 
 const MenuList = styled.ul`

@@ -19,7 +19,7 @@ const Navbar = () => {
   const logo = inView ? pioneersWhiteLogo : pioneersColorLogo
   // const change = inView ? "true" : "false"
   const change = inView ? true : false
-  console.log(change)
+  // console.log(change)
   return (
     <>
       <NavBarStyled change={change}>

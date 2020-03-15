@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useContext, useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 
 export const WrapperContext = createContext()
@@ -10,8 +10,21 @@ export function WrapperProvider({ children }) {
     rootMargin: "-56px",
   })
 
+  const [starting, setDefault] = useState(true)
+
+  function removeDefault() {
+    if (inView) {
+      setDefault(false)
+    }
+  }
+
+  useEffect(() => {
+    removeDefault()
+    console.log({ inView })
+  }, [inView])
+  console.log({ starting })
   return (
-    <WrapperContextProvider value={{ ref, inView }}>
+    <WrapperContextProvider value={{ ref, inView, starting }}>
       <>{children}</>
     </WrapperContextProvider>
   )

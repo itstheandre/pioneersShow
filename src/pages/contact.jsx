@@ -79,6 +79,7 @@ const ContactPage = ({ data }) => {
                     placeholder="Your name"
                     id="name"
                     name="name"
+                    required
                   />
                 </div>
                 <div className="individualInput">
@@ -89,6 +90,7 @@ const ContactPage = ({ data }) => {
                     placeholder="Your email"
                     id="email"
                     name="email"
+                    required
                   />
                 </div>
               </div>
@@ -101,6 +103,7 @@ const ContactPage = ({ data }) => {
                     placeholder={subjectText}
                     name="subject"
                     id="text"
+                    required
                   />
                 </div>
               </div>
@@ -113,6 +116,7 @@ const ContactPage = ({ data }) => {
                     type="textarea"
                     id="message"
                     name="message"
+                    required
                   />
                 </div>
               </div>

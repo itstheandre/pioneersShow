@@ -20,13 +20,13 @@ const MyNavTest = styled.nav`
 
 const MyNavBar = () => {
   const [displayMobile, setDisplayMobile] = useState(false)
-  const { inView } = useWrapper()
+  const { inView, starting } = useWrapper()
 
   useEffect(() => {
     function checkAndAutoHide() {
       const screen = window.innerWidth
       if (displayMobile && screen > 768) {
-        console.log("oi?")
+        // console.log("oi?")
         setDisplayMobile(false)
       }
     }
@@ -47,6 +47,7 @@ const MyNavBar = () => {
           toggle={toggle}
           displayMobile={displayMobile}
           inView={inView}
+          starting={starting}
         />
         <Mobile displayMobile={displayMobile} toggle={toggle} />
       </MyNavTest>
