@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import BgImg from "gatsby-background-image"
 
@@ -18,24 +19,26 @@ const SqEpisodeCard = ({ episodeInfo }) => {
     fluid,
   } = episodeInfo
   return (
-    <figure className="item">
-      <BgImg
-        fluid={fluid}
-        Tag="div"
-        className="image"
-        backgroundColor={palette.backgroundTransparent}
-      >
-        <div className="imageOverlay" />
-      </BgImg>
-      <figcaption>
-        <div className="description">
-          {runtime}m | {publishedDate}
-        </div>
-        <div className="title">
-          #{episodeNumber} - {title}
-        </div>
-      </figcaption>
-    </figure>
+    <Link to={`/${slug}`}>
+      <figure className="item">
+        <BgImg
+          fluid={fluid}
+          Tag="div"
+          className="image"
+          backgroundColor={palette.backgroundTransparent}
+        >
+          <div className="imageOverlay" />
+        </BgImg>
+        <figcaption>
+          <div className="description">
+            {runtime}m | {publishedDate}
+          </div>
+          <div className="title">
+            #{episodeNumber} - {title}
+          </div>
+        </figcaption>
+      </figure>
+    </Link>
   )
 }
 

@@ -66,7 +66,7 @@ const EpisodeWrap = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 3rem;
-  z-index: -1;
+  /* z-index: -1; */
   margin: 3rem 0 16rem;
 
 @media (max-width:770px) {
@@ -79,6 +79,9 @@ const EpisodeWrap = styled.section`
 
 }
 
+a {
+text-decoration: none;
+color: var(--black);
 
   .item {
     width: 100%;
@@ -131,6 +134,7 @@ const EpisodeWrap = styled.section`
       }
     }
   }
+}
 `
 
 export { EpisodeWrap, ReqEpisode }
