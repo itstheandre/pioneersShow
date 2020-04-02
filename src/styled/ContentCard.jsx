@@ -52,16 +52,6 @@ const ReqEpisode = styled.article`
   }
 `
 
-// const RqEpisodeDescription = styled.h4`
-//   font-size: 1.5rem;
-//   padding-bottom: 1rem;
-// `
-
-// const RqEpisodeTitle = styled.h3`
-//   font-size: 2rem;
-//   color: ${palette.black};
-// `
-
 const EpisodeWrap = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

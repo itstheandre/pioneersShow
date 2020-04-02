@@ -108,6 +108,7 @@ const EpisodeTemplatePage = styled.main`
       h2,
       h3 {
         color: var(--dark-blue);
+        font-family: var(--tt-reg);
       }
 
       h2 {
