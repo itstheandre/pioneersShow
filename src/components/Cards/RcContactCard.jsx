@@ -5,7 +5,7 @@ import { ReqEpisode } from "../../styled/ContentCard"
 import allStyles from "../../styled/Theme"
 const { palette } = allStyles
 
-const RcContactCard = ({ episodeInfo }) => {
+const RcContactCard = ({ episodeInfo, side }) => {
   const {
     title,
     runtime,
@@ -15,25 +15,29 @@ const RcContactCard = ({ episodeInfo }) => {
     fluid,
   } = episodeInfo
 
+  const sideShorter = side ? true : false
+
   return (
-    <ReqEpisode>
-      <BgImg
-        fluid={fluid}
-        Tag="div"
-        className="image"
-        backgroundColor={palette.backgroundTransparent}
-      >
-        <div className="overlay" />
-      </BgImg>
-      <div className="body">
-        <div className="description">
-          {runtime}m | {publishedDate}
+    <Link to={`/${slug}`}>
+      <ReqEpisode sideShorter={sideShorter}>
+        <BgImg
+          fluid={fluid}
+          Tag="div"
+          className="image"
+          backgroundColor={palette.backgroundTransparent}
+        >
+          <div className="overlay" />
+        </BgImg>
+        <div className="body">
+          <div className="description">
+            {runtime}m | {publishedDate}
+          </div>
+          <div className="title">
+            #{episodeNumber} - {title}
+          </div>
         </div>
-        <div className="title">
-          #{episodeNumber} - {title}
-        </div>
-      </div>
-    </ReqEpisode>
+      </ReqEpisode>
+    </Link>
   )
 }
 

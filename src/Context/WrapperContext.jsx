@@ -14,15 +14,18 @@ export function WrapperProvider({ children }) {
 
   function removeDefault() {
     if (inView) {
-      setDefault(false)
+      return setDefault(false)
     }
+    setDefault(true)
   }
 
   useEffect(() => {
     removeDefault()
     console.log({ inView })
   }, [inView])
+
   console.log({ starting })
+
   return (
     <WrapperContextProvider value={{ ref, inView, starting }}>
       <>{children}</>

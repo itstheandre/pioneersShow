@@ -31,12 +31,22 @@ const ReqEpisode = styled.article`
     padding: 0 2rem;
 
     .description {
-      font-size: 1.5rem;
+      font-size: ${props => {
+        if (props.sideShorter) {
+          return "1.25rem"
+        }
+        return "1.5rem"
+      }};
       padding-bottom: 1rem;
     }
 
     .title {
-      font-size: 2rem;
+      font-size: ${props => {
+        if (props.sideShorter) {
+          return "1.66rem"
+        }
+        return "2rem"
+      }};
       color: ${palette.black};
     }
   }

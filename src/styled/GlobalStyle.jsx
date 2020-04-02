@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import { TTRegular, TTExtraBold, TTBold, Lora } from "../lib/fonts"
+import allStyles from "./Theme"
+const { palette } = allStyles
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -12,7 +14,10 @@ html {
   --lora: ${Lora};
   --tt-reg: ${TTRegular};
   --tt-bold: ${TTBold};
-  --tt-extra: ${TTExtraBold}
+  --tt-extra: ${TTExtraBold};
+  --dark-blue: ${palette.background};
+  --primary: ${palette.primary};
+  --secondary: ${palette.secondary}
 }
 
 body {

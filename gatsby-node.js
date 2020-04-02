@@ -15,27 +15,43 @@
 const path = require("path")
 
 exports.createPages = async ({ actions, graphql }) => {
-  function mapOver(arr) {
-    return arr.map(({ node }) => node)
-  }
+  await Promise.all([createEpisodes({ actions, graphql })])
+}
 
-  // const seasonsQuery = await graphql(`
-  //   {
-  //     allSanitySeason {
-  //       edges {
-  //         node {
-  //           title
-  //           slug {
-  //             current
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const seasons = seasonsQuery.data.allSanitySeason.edges.map(
-  //   ({ node }) => node
-  // )
+async function createSeasons({ actions, graphql }) {
+  const seasonsQuery = await graphql(`
+    {
+      allSanitySeason {
+        edges {
+          node {
+            title
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const seasons = seasonsQuery.data.allSanitySeason.edges.map(
+    ({ node }) => node
+  )
+
+  seasons.forEach(season => {
+    actions.createPage({
+      path: `/info/${season.slug.current}`,
+      component: path.resolve("./src/template/Season.js"),
+      context: {
+        slug: season.slug.current,
+        title: season.title,
+      },
+    })
+  })
+}
+
+async function createEpisodes({ actions, graphql }) {
+  const episodeTemplateComponent = path.resolve("./src/template/Episodes.js")
 
   const episodesQuery = await graphql(`
     {
@@ -59,22 +75,10 @@ exports.createPages = async ({ actions, graphql }) => {
   episodes.forEach(episode => {
     actions.createPage({
       path: `/${episode.slug.current}`,
-      component: path.resolve("./src/template/Episodes.js"),
+      component: episodeTemplateComponent,
       context: {
         slug: episode.slug.current,
-        title: episode.title,
       },
     })
   })
-
-  // seasons.forEach(season => {
-  //   actions.createPage({
-  //     path: `/info/${season.slug.current}`,
-  //     component: path.resolve("./src/template/Season.js"),
-  //     context: {
-  //       slug: season.slug.current,
-  //       title: season.title,
-  //     },
-  //   })
-  // })
 }

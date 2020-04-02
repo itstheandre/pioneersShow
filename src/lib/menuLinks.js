@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 const MenuLinks = [
   { to: "/", title: "Home" },
   { to: "/about", title: "About" },
+  { to: "/team", title: "Team" },
   { to: "/episodes", title: "Episodes" },
   { to: "/contact", title: "Contact" },
 ]

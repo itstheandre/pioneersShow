@@ -24,7 +24,7 @@ const DesktopNav = styled.nav`
     background-color: ${({ change, starting }) => {
       /* console.log({ change }) */
       console.log("Styled stuff", { starting })
-      if (starting) return "rgba(0,0,0,0)"
+      if (starting) return "rgba(255,255,255,1)"
       if (change) return navBar.background[change]
     }};
     box-shadow: ${({ change, starting }) => {

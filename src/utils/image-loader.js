@@ -34,6 +34,11 @@ import itunesColorLogo from "../assets/images/color-logos/itunes.png"
 import spotifyColorLogo from "../assets/images/color-logos/spotify.png"
 import youtubeColorLogo from "../assets/images/color-logos/youtube.png"
 
+// Color SVGS
+import linkedinSVG from "../assets/images/socialLinks-LI.svg"
+import instagramSVG from "../assets/images/socialLinks-IG.svg"
+import twitterSVG from "../assets/images/socialLinks-Twitter.svg"
+
 export {
   instagramLogo,
   linkedInLogo,
@@ -54,4 +59,7 @@ export {
   menuWhite,
   menuBlack,
   closeX,
+  linkedinSVG,
+  instagramSVG,
+  twitterSVG,
 }
