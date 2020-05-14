@@ -22,6 +22,7 @@ html {
 
 body {
   font-family: var(--tt-reg);
+  overflow-x:hidden;
 
 }
 
