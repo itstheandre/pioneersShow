@@ -67,6 +67,10 @@ const SubscriptionDiv = styled.div`
   padding: 0 2.5em;
   img {
     height: 100%;
+    :hover {
+      transform: scale(1.1);
+      transition: translate 10ms ease-in-out;
+    }
   }
   @media screen and (max-width: 768px) {
     padding: 0 2.5vw;

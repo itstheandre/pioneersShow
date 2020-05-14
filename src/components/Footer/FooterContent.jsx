@@ -12,6 +12,10 @@ const FooterLogosWrapper = styled.div`
 
   a {
     cursor: pointer;
+    :hover {
+      transform: scale(1.1);
+      transition: transform 10ms ease-in-out;
+    }
   }
 `
 

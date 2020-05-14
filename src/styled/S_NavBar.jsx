@@ -80,6 +80,10 @@ const DesktopNav = styled.nav`
       align-items: center;
       /* padding: 0 3rem; */
       height: 2.5rem;
+      :hover {
+        transform: scale(1.05);
+        transition: transform 10ms ease-in;
+      }
     }
     .active {
       color: ${({ inView }) => (inView ? palette.primary : palette.secondary)};

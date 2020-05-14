@@ -23,6 +23,8 @@ html {
 body {
   font-family: var(--tt-reg);
   overflow-x:hidden;
+  width: 100vw;
+  overflow-y:auto;
 
 }
 
